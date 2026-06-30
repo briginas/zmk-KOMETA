@@ -139,7 +139,7 @@
     <g transform="translate(136 195)"><use href="#key-empty"/></g>
     <g transform="translate(184 188)"><use href="#key-empty"/></g>
     <g transform="translate(232 195)"><use href="#key-empty"/></g>
-    <g transform="translate(280 203)"><use href="#key-layer-blue"/><text class="key-text-dark-small" x="24" y="21">Boot</text></g>
+    <g transform="translate(280 203)"><use href="#key-empty"/></g>
     <g transform="translate(472 203)"><use href="#key-empty"/></g>
     <g transform="translate(520 195)"><use href="#key-special"/><text class="key-text-small" x="24" y="21">Bspc</text></g>
     <g transform="translate(568 188)"><use href="#key-normal"/><text class="key-text" x="24" y="21">[</text></g>
@@ -189,11 +189,11 @@
 
     <g transform="translate(40 216)"><use href="#key-empty"/></g>
     <g transform="translate(88 210)"><use href="#key-normal"/><text class="key-text" x="24" y="21">`</text></g>
-    <g transform="translate(136 195)"><use href="#key-empty"/><text class="key-text-small" x="24" y="21">TRNS</text></g>
-    <g transform="translate(184 188)"><use href="#key-empty"/><text class="key-text-small" x="24" y="21">TRNS</text></g>
+    <g transform="translate(136 195)"><use href="#key-empty"/></g>
+    <g transform="translate(184 188)"><use href="#key-empty"/></g>
     <g transform="translate(232 195)"><use href="#key-special"/><text class="key-text" x="24" y="21">Del</text></g>
-    <g transform="translate(280 203)"><use href="#key-empty"/><text class="key-text-small" x="24" y="21">TRNS</text></g>
-    <g transform="translate(472 203)"><use href="#key-layer-blue"/><text class="key-text-dark-small" x="24" y="21">Boot</text></g>
+    <g transform="translate(280 203)"><use href="#key-empty"/></g>
+    <g transform="translate(472 203)"><use href="#key-empty"/></g>
     <g transform="translate(520 195)"><use href="#key-empty"/></g>
     <g transform="translate(568 188)"><use href="#key-empty"/></g>
     <g transform="translate(616 195)"><use href="#key-empty"/></g>

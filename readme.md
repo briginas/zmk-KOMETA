@@ -23,6 +23,6 @@ Dashed keys are physical keys that are currently unused (`&none`); transparent k
 | Layer | How you get there | Role |
 |---|---|---|
 | **Base** | Default | QWERTY; **second left thumb** = hold **Symbols**; **second right thumb** = hold **Nav**; thumbs share **Space** and **Enter** between them. |
-| **Symbols** | Hold **second left thumb** from Base | Punctuation and symbols; **Tab**; **Bootloader** on the left bottom block; right block includes **Backspace**; second key from the right in the thumb cluster -> **Adjust**. |
-| **Nav** | Hold **second right thumb** from Base | Numbers 1-0 on top row; arrows and navigation on home row (with mods); **Bootloader**; **Adjust** via second key from the left in the thumb cluster (`mo 3`). |
+| **Symbols** | Hold **second left thumb** from Base | Punctuation and symbols; **Tab**; right block includes **Backspace**; second key from the right in the thumb cluster -> **Adjust**. |
+| **Nav** | Hold **second right thumb** from Base | Numbers 1-0 on top row; arrows and navigation on home row (with mods); **Delete**; **Adjust** via second key from the left in the thumb cluster (`mo 3`). |
 | **Adjust** | From **Symbols** (right thumb) or **Nav** (left thumb) | **F1–F12**; **BT\_SEL 0** and **BT\_CLR**; volume and media keys. |
