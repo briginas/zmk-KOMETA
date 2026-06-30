@@ -54,7 +54,6 @@
         compatible = "zmk,keymap";
 
         en {
-            display-name = "base";
             bindings = <
 &none  &kp Q              &kp W                &kp E            &kp R            &kp T      &kp Y      &kp U             &kp I             &kp O                 &kp P                       &none
 &none  &hml LEFT_SHIFT A  &hml LEFT_CONTROL S  &hml LEFT_GUI D  &hml LEFT_ALT F  &kp G      &kp H      &hmr RIGHT_ALT J  &hmr RIGHT_GUI K  &hmr RIGHT_CONTROL L  &hmr RIGHT_SHIFT SEMICOLON  &none
@@ -64,7 +63,6 @@
         };
 
         sym_en {
-            display-name = "Symbols";
             bindings = <
 &none  &kp EXCL                &kp AT            &kp HASH      &kp DOLLAR    &kp PERCENT  &none      &kp AMPERSAND         &kp ASTERISK               &kp LEFT_PARENTHESIS            &kp RIGHT_PARENTHESIS  &none
 &none  &hml LEFT_SHIFT ESCAPE  &kp LEFT_CONTROL  &kp LEFT_GUI  &kp LEFT_ALT  &kp CARET    &kp MINUS  &hmr RIGHT_ALT EQUAL  &hmr RIGHT_GUI LEFT_BRACE  &hmr RIGHT_CONTROL RIGHT_BRACE  &hmr RIGHT_SHIFT SQT   &none
@@ -74,7 +72,6 @@
         };
 
         nav {
-            display-name = "Nav";
             bindings = <
 &none  &kp N1          &kp N2            &kp N3        &kp N4        &kp N5        &kp N6       &kp N7                     &kp N8                   &kp N9                    &kp N0           &none
 &none  &kp LEFT_SHIFT  &kp LEFT_CONTROL  &kp LEFT_GUI  &kp LEFT_ALT  &kp NUMBER_6  &kp LEFT     &hmr RIGHT_ALT DOWN_ARROW  &hmr RIGHT_GUI UP_ARROW  &hmr RIGHT_CONTROL RIGHT  &kp RIGHT_SHIFT  &none
@@ -84,7 +81,6 @@
         };
 
         adj {
-            display-name = "Adjust";
             bindings = <
 &none  &kp F1  &kp F2   &kp F3   &kp F4   &none  &none         &none              &none       &none            &none       &none
 &none  &kp F5  &kp F6   &kp F7   &kp F8   &none  &none         &kp C_VOLUME_DOWN  &kp K_MUTE  &kp C_VOLUME_UP  &none       &none
