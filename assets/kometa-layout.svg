@@ -1,277 +1,263 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 602 969" width="602" height="969">
-<style>text { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif; }</style>
-<rect width="602" height="969" fill="white"/>
-<rect x="15" y="15" width="80" height="20" rx="9" fill="#4A90D9"/>
-<text x="55" y="25.0" text-anchor="middle" dominant-baseline="middle" font-size="11" font-weight="bold" fill="white">Base</text>
-<rect x="15.0" y="68.7" width="44" height="44" rx="5" fill="#E8E8E8" stroke="#AAAAAA" stroke-width="1"/>
-<text x="37.0" y="90.7" text-anchor="middle" dominant-baseline="middle" font-size="10" fill="#333333">Q</text>
-<rect x="59.0" y="57.3" width="44" height="44" rx="5" fill="#E8E8E8" stroke="#AAAAAA" stroke-width="1"/>
-<text x="81.0" y="79.3" text-anchor="middle" dominant-baseline="middle" font-size="10" fill="#333333">W</text>
-<rect x="103.0" y="52.0" width="44" height="44" rx="5" fill="#E8E8E8" stroke="#AAAAAA" stroke-width="1"/>
-<text x="125.0" y="74.0" text-anchor="middle" dominant-baseline="middle" font-size="10" fill="#333333">E</text>
-<rect x="147.0" y="57.3" width="44" height="44" rx="5" fill="#E8E8E8" stroke="#AAAAAA" stroke-width="1"/>
-<text x="169.0" y="79.3" text-anchor="middle" dominant-baseline="middle" font-size="10" fill="#333333">R</text>
-<rect x="191.0" y="63.0" width="44" height="44" rx="5" fill="#E8E8E8" stroke="#AAAAAA" stroke-width="1"/>
-<text x="213.0" y="85.0" text-anchor="middle" dominant-baseline="middle" font-size="10" fill="#333333">T</text>
-<rect x="367.0" y="63.0" width="44" height="44" rx="5" fill="#E8E8E8" stroke="#AAAAAA" stroke-width="1"/>
-<text x="389.0" y="85.0" text-anchor="middle" dominant-baseline="middle" font-size="10" fill="#333333">Y</text>
-<rect x="411.0" y="57.3" width="44" height="44" rx="5" fill="#E8E8E8" stroke="#AAAAAA" stroke-width="1"/>
-<text x="433.0" y="79.3" text-anchor="middle" dominant-baseline="middle" font-size="10" fill="#333333">U</text>
-<rect x="455.0" y="52.0" width="44" height="44" rx="5" fill="#E8E8E8" stroke="#AAAAAA" stroke-width="1"/>
-<text x="477.0" y="74.0" text-anchor="middle" dominant-baseline="middle" font-size="10" fill="#333333">I</text>
-<rect x="499.0" y="57.3" width="44" height="44" rx="5" fill="#E8E8E8" stroke="#AAAAAA" stroke-width="1"/>
-<text x="521.0" y="79.3" text-anchor="middle" dominant-baseline="middle" font-size="10" fill="#333333">O</text>
-<rect x="543.0" y="68.7" width="44" height="44" rx="5" fill="#E8E8E8" stroke="#AAAAAA" stroke-width="1"/>
-<text x="565.0" y="90.7" text-anchor="middle" dominant-baseline="middle" font-size="10" fill="#333333">P</text>
-<rect x="15.0" y="112.7" width="44" height="44" rx="5" fill="#C2D9F5" stroke="#7AABDE" stroke-width="1"/>
-<text x="37.0" y="130.3" text-anchor="middle" dominant-baseline="middle" font-size="10" fill="#1A3A5C">A</text>
-<text x="37.0" y="144.4" text-anchor="middle" dominant-baseline="middle" font-size="8" fill="#1A3A5C" opacity="0.7">⇧ hold</text>
-<rect x="59.0" y="101.3" width="44" height="44" rx="5" fill="#C2D9F5" stroke="#7AABDE" stroke-width="1"/>
-<text x="81.0" y="118.9" text-anchor="middle" dominant-baseline="middle" font-size="10" fill="#1A3A5C">S</text>
-<text x="81.0" y="133.0" text-anchor="middle" dominant-baseline="middle" font-size="8" fill="#1A3A5C" opacity="0.7">⌃ hold</text>
-<rect x="103.0" y="96.0" width="44" height="44" rx="5" fill="#C2D9F5" stroke="#7AABDE" stroke-width="1"/>
-<text x="125.0" y="113.6" text-anchor="middle" dominant-baseline="middle" font-size="10" fill="#1A3A5C">D</text>
-<text x="125.0" y="127.7" text-anchor="middle" dominant-baseline="middle" font-size="8" fill="#1A3A5C" opacity="0.7">⌘ hold</text>
-<rect x="147.0" y="101.3" width="44" height="44" rx="5" fill="#C2D9F5" stroke="#7AABDE" stroke-width="1"/>
-<text x="169.0" y="118.9" text-anchor="middle" dominant-baseline="middle" font-size="10" fill="#1A3A5C">F</text>
-<text x="169.0" y="133.0" text-anchor="middle" dominant-baseline="middle" font-size="8" fill="#1A3A5C" opacity="0.7">⌥ hold</text>
-<rect x="191.0" y="107.0" width="44" height="44" rx="5" fill="#E8E8E8" stroke="#AAAAAA" stroke-width="1"/>
-<text x="213.0" y="129.0" text-anchor="middle" dominant-baseline="middle" font-size="10" fill="#333333">G</text>
-<rect x="367.0" y="107.0" width="44" height="44" rx="5" fill="#E8E8E8" stroke="#AAAAAA" stroke-width="1"/>
-<text x="389.0" y="129.0" text-anchor="middle" dominant-baseline="middle" font-size="10" fill="#333333">H</text>
-<rect x="411.0" y="101.3" width="44" height="44" rx="5" fill="#C2D9F5" stroke="#7AABDE" stroke-width="1"/>
-<text x="433.0" y="118.9" text-anchor="middle" dominant-baseline="middle" font-size="10" fill="#1A3A5C">J</text>
-<text x="433.0" y="133.0" text-anchor="middle" dominant-baseline="middle" font-size="8" fill="#1A3A5C" opacity="0.7">⌥ hold</text>
-<rect x="455.0" y="96.0" width="44" height="44" rx="5" fill="#C2D9F5" stroke="#7AABDE" stroke-width="1"/>
-<text x="477.0" y="113.6" text-anchor="middle" dominant-baseline="middle" font-size="10" fill="#1A3A5C">K</text>
-<text x="477.0" y="127.7" text-anchor="middle" dominant-baseline="middle" font-size="8" fill="#1A3A5C" opacity="0.7">⌘ hold</text>
-<rect x="499.0" y="101.3" width="44" height="44" rx="5" fill="#C2D9F5" stroke="#7AABDE" stroke-width="1"/>
-<text x="521.0" y="118.9" text-anchor="middle" dominant-baseline="middle" font-size="10" fill="#1A3A5C">L</text>
-<text x="521.0" y="133.0" text-anchor="middle" dominant-baseline="middle" font-size="8" fill="#1A3A5C" opacity="0.7">⌃ hold</text>
-<rect x="543.0" y="112.7" width="44" height="44" rx="5" fill="#C2D9F5" stroke="#7AABDE" stroke-width="1"/>
-<text x="565.0" y="130.3" text-anchor="middle" dominant-baseline="middle" font-size="10" fill="#1A3A5C">;</text>
-<text x="565.0" y="144.4" text-anchor="middle" dominant-baseline="middle" font-size="8" fill="#1A3A5C" opacity="0.7">⇧ hold</text>
-<rect x="15.0" y="156.7" width="44" height="44" rx="5" fill="#E8E8E8" stroke="#AAAAAA" stroke-width="1"/>
-<text x="37.0" y="178.7" text-anchor="middle" dominant-baseline="middle" font-size="10" fill="#333333">Z</text>
-<rect x="59.0" y="145.3" width="44" height="44" rx="5" fill="#E8E8E8" stroke="#AAAAAA" stroke-width="1"/>
-<text x="81.0" y="167.3" text-anchor="middle" dominant-baseline="middle" font-size="10" fill="#333333">X</text>
-<rect x="103.0" y="140.0" width="44" height="44" rx="5" fill="#E8E8E8" stroke="#AAAAAA" stroke-width="1"/>
-<text x="125.0" y="162.0" text-anchor="middle" dominant-baseline="middle" font-size="10" fill="#333333">C</text>
-<rect x="147.0" y="145.3" width="44" height="44" rx="5" fill="#E8E8E8" stroke="#AAAAAA" stroke-width="1"/>
-<text x="169.0" y="167.3" text-anchor="middle" dominant-baseline="middle" font-size="10" fill="#333333">V</text>
-<rect x="191.0" y="151.0" width="44" height="44" rx="5" fill="#E8E8E8" stroke="#AAAAAA" stroke-width="1"/>
-<text x="213.0" y="173.0" text-anchor="middle" dominant-baseline="middle" font-size="10" fill="#333333">B</text>
-<rect x="367.0" y="151.0" width="44" height="44" rx="5" fill="#E8E8E8" stroke="#AAAAAA" stroke-width="1"/>
-<text x="389.0" y="173.0" text-anchor="middle" dominant-baseline="middle" font-size="10" fill="#333333">N</text>
-<rect x="411.0" y="145.3" width="44" height="44" rx="5" fill="#E8E8E8" stroke="#AAAAAA" stroke-width="1"/>
-<text x="433.0" y="167.3" text-anchor="middle" dominant-baseline="middle" font-size="10" fill="#333333">M</text>
-<rect x="455.0" y="140.0" width="44" height="44" rx="5" fill="#E8E8E8" stroke="#AAAAAA" stroke-width="1"/>
-<text x="477.0" y="162.0" text-anchor="middle" dominant-baseline="middle" font-size="10" fill="#333333">,</text>
-<rect x="499.0" y="145.3" width="44" height="44" rx="5" fill="#E8E8E8" stroke="#AAAAAA" stroke-width="1"/>
-<text x="521.0" y="167.3" text-anchor="middle" dominant-baseline="middle" font-size="10" fill="#333333">.</text>
-<rect x="543.0" y="156.7" width="44" height="44" rx="5" fill="#E8E8E8" stroke="#AAAAAA" stroke-width="1"/>
-<text x="565.0" y="178.7" text-anchor="middle" dominant-baseline="middle" font-size="10" fill="#333333">/</text>
-<rect x="191.0" y="195.0" width="44" height="44" rx="5" fill="#FFD78A" stroke="#C89B30" stroke-width="1"/>
-<text x="213.0" y="217.0" text-anchor="middle" dominant-baseline="middle" font-size="10" fill="#5A3D00">▼ Sym</text>
-<rect x="235.0" y="199.4" width="44" height="44" rx="5" fill="#E8E8E8" stroke="#AAAAAA" stroke-width="1"/>
-<text x="257.0" y="221.4" text-anchor="middle" dominant-baseline="middle" font-size="10" fill="#333333">Space</text>
-<rect x="323.0" y="199.4" width="44" height="44" rx="5" fill="#E8E8E8" stroke="#AAAAAA" stroke-width="1"/>
-<text x="345.0" y="221.4" text-anchor="middle" dominant-baseline="middle" font-size="10" fill="#333333">Enter</text>
-<rect x="367.0" y="195.0" width="44" height="44" rx="5" fill="#FFD78A" stroke="#C89B30" stroke-width="1"/>
-<text x="389.0" y="217.0" text-anchor="middle" dominant-baseline="middle" font-size="10" fill="#5A3D00">▼ Nav</text>
-<line x1="125.0" y1="118.0" x2="477.0" y2="118.0" stroke="#888888" stroke-width="1.5" stroke-dasharray="3,2" opacity="0.6"/>
-<rect x="283.0" y="97.0" width="36" height="14" rx="3" fill="white" stroke="#888888" stroke-width="1" opacity="0.9"/>
-<text x="301.0" y="104.0" text-anchor="middle" dominant-baseline="middle" font-size="8" fill="#888888" font-weight="bold">Esc</text>
-<line x1="37.0" y1="134.7" x2="565.0" y2="134.7" stroke="#888888" stroke-width="1.5" stroke-dasharray="3,2" opacity="0.6"/>
-<rect x="283.0" y="113.7" width="36" height="14" rx="3" fill="white" stroke="#888888" stroke-width="1" opacity="0.9"/>
-<text x="301.0" y="120.7" text-anchor="middle" dominant-baseline="middle" font-size="8" fill="#888888" font-weight="bold">CapsLk</text>
-<line x1="125.0" y1="74.0" x2="477.0" y2="74.0" stroke="#888888" stroke-width="1.5" stroke-dasharray="3,2" opacity="0.6"/>
-<rect x="283.0" y="53.0" width="36" height="14" rx="3" fill="white" stroke="#888888" stroke-width="1" opacity="0.9"/>
-<text x="301.0" y="60.0" text-anchor="middle" dominant-baseline="middle" font-size="8" fill="#888888" font-weight="bold">Lang</text>
-<rect x="15" y="257" width="80" height="20" rx="9" fill="#E67E22"/>
-<text x="55" y="267.0" text-anchor="middle" dominant-baseline="middle" font-size="11" font-weight="bold" fill="white">Symbols</text>
-<rect x="15.0" y="310.7" width="44" height="44" rx="5" fill="#E8E8E8" stroke="#AAAAAA" stroke-width="1"/>
-<text x="37.0" y="332.7" text-anchor="middle" dominant-baseline="middle" font-size="10" fill="#333333">!</text>
-<rect x="59.0" y="299.3" width="44" height="44" rx="5" fill="#E8E8E8" stroke="#AAAAAA" stroke-width="1"/>
-<text x="81.0" y="321.3" text-anchor="middle" dominant-baseline="middle" font-size="10" fill="#333333">@</text>
-<rect x="103.0" y="294.0" width="44" height="44" rx="5" fill="#E8E8E8" stroke="#AAAAAA" stroke-width="1"/>
-<text x="125.0" y="316.0" text-anchor="middle" dominant-baseline="middle" font-size="10" fill="#333333">#</text>
-<rect x="147.0" y="299.3" width="44" height="44" rx="5" fill="#E8E8E8" stroke="#AAAAAA" stroke-width="1"/>
-<text x="169.0" y="321.3" text-anchor="middle" dominant-baseline="middle" font-size="10" fill="#333333">$</text>
-<rect x="191.0" y="305.0" width="44" height="44" rx="5" fill="#E8E8E8" stroke="#AAAAAA" stroke-width="1"/>
-<text x="213.0" y="327.0" text-anchor="middle" dominant-baseline="middle" font-size="10" fill="#333333">%</text>
-<rect x="367.0" y="305.0" width="44" height="44" rx="5" fill="#F3F3F3" stroke="#DDDDDD" stroke-width="1"/>
-<rect x="411.0" y="299.3" width="44" height="44" rx="5" fill="#E8E8E8" stroke="#AAAAAA" stroke-width="1"/>
-<text x="433.0" y="321.3" text-anchor="middle" dominant-baseline="middle" font-size="10" fill="#333333">&amp;</text>
-<rect x="455.0" y="294.0" width="44" height="44" rx="5" fill="#E8E8E8" stroke="#AAAAAA" stroke-width="1"/>
-<text x="477.0" y="316.0" text-anchor="middle" dominant-baseline="middle" font-size="10" fill="#333333">*</text>
-<rect x="499.0" y="299.3" width="44" height="44" rx="5" fill="#E8E8E8" stroke="#AAAAAA" stroke-width="1"/>
-<text x="521.0" y="321.3" text-anchor="middle" dominant-baseline="middle" font-size="10" fill="#333333">(</text>
-<rect x="543.0" y="310.7" width="44" height="44" rx="5" fill="#E8E8E8" stroke="#AAAAAA" stroke-width="1"/>
-<text x="565.0" y="332.7" text-anchor="middle" dominant-baseline="middle" font-size="10" fill="#333333">)</text>
-<rect x="15.0" y="354.7" width="44" height="44" rx="5" fill="#C2D9F5" stroke="#7AABDE" stroke-width="1"/>
-<text x="37.0" y="372.3" text-anchor="middle" dominant-baseline="middle" font-size="10" fill="#1A3A5C">Esc</text>
-<text x="37.0" y="386.4" text-anchor="middle" dominant-baseline="middle" font-size="8" fill="#1A3A5C" opacity="0.7">⇧ hold</text>
-<rect x="59.0" y="343.3" width="44" height="44" rx="5" fill="#E8E8E8" stroke="#AAAAAA" stroke-width="1"/>
-<text x="81.0" y="365.3" text-anchor="middle" dominant-baseline="middle" font-size="10" fill="#333333">⌃</text>
-<rect x="103.0" y="338.0" width="44" height="44" rx="5" fill="#E8E8E8" stroke="#AAAAAA" stroke-width="1"/>
-<text x="125.0" y="360.0" text-anchor="middle" dominant-baseline="middle" font-size="10" fill="#333333">⌘</text>
-<rect x="147.0" y="343.3" width="44" height="44" rx="5" fill="#E8E8E8" stroke="#AAAAAA" stroke-width="1"/>
-<text x="169.0" y="365.3" text-anchor="middle" dominant-baseline="middle" font-size="10" fill="#333333">⌥</text>
-<rect x="191.0" y="349.0" width="44" height="44" rx="5" fill="#E8E8E8" stroke="#AAAAAA" stroke-width="1"/>
-<text x="213.0" y="371.0" text-anchor="middle" dominant-baseline="middle" font-size="10" fill="#333333">^</text>
-<rect x="367.0" y="349.0" width="44" height="44" rx="5" fill="#E8E8E8" stroke="#AAAAAA" stroke-width="1"/>
-<text x="389.0" y="371.0" text-anchor="middle" dominant-baseline="middle" font-size="10" fill="#333333">−</text>
-<rect x="411.0" y="343.3" width="44" height="44" rx="5" fill="#C2D9F5" stroke="#7AABDE" stroke-width="1"/>
-<text x="433.0" y="360.9" text-anchor="middle" dominant-baseline="middle" font-size="10" fill="#1A3A5C">=</text>
-<text x="433.0" y="375.0" text-anchor="middle" dominant-baseline="middle" font-size="8" fill="#1A3A5C" opacity="0.7">⌥ hold</text>
-<rect x="455.0" y="338.0" width="44" height="44" rx="5" fill="#C2D9F5" stroke="#7AABDE" stroke-width="1"/>
-<text x="477.0" y="355.6" text-anchor="middle" dominant-baseline="middle" font-size="10" fill="#1A3A5C">{</text>
-<text x="477.0" y="369.7" text-anchor="middle" dominant-baseline="middle" font-size="8" fill="#1A3A5C" opacity="0.7">⌘ hold</text>
-<rect x="499.0" y="343.3" width="44" height="44" rx="5" fill="#C2D9F5" stroke="#7AABDE" stroke-width="1"/>
-<text x="521.0" y="360.9" text-anchor="middle" dominant-baseline="middle" font-size="10" fill="#1A3A5C">}</text>
-<text x="521.0" y="375.0" text-anchor="middle" dominant-baseline="middle" font-size="8" fill="#1A3A5C" opacity="0.7">⌃ hold</text>
-<rect x="543.0" y="354.7" width="44" height="44" rx="5" fill="#C2D9F5" stroke="#7AABDE" stroke-width="1"/>
-<text x="565.0" y="372.3" text-anchor="middle" dominant-baseline="middle" font-size="10" fill="#1A3A5C">'</text>
-<text x="565.0" y="386.4" text-anchor="middle" dominant-baseline="middle" font-size="8" fill="#1A3A5C" opacity="0.7">⇧ hold</text>
-<rect x="15.0" y="398.7" width="44" height="44" rx="5" fill="#E8E8E8" stroke="#AAAAAA" stroke-width="1"/>
-<text x="37.0" y="420.7" text-anchor="middle" dominant-baseline="middle" font-size="10" fill="#333333">Tab</text>
-<rect x="59.0" y="387.3" width="44" height="44" rx="5" fill="#F3F3F3" stroke="#DDDDDD" stroke-width="1"/>
-<rect x="103.0" y="382.0" width="44" height="44" rx="5" fill="#F3F3F3" stroke="#DDDDDD" stroke-width="1"/>
-<rect x="147.0" y="387.3" width="44" height="44" rx="5" fill="#F3F3F3" stroke="#DDDDDD" stroke-width="1"/>
-<rect x="191.0" y="393.0" width="44" height="44" rx="5" fill="#A8DFA8" stroke="#5A9E5A" stroke-width="1"/>
-<text x="213.0" y="415.0" text-anchor="middle" dominant-baseline="middle" font-size="10" fill="#1A4A1A">Boot</text>
-<rect x="367.0" y="393.0" width="44" height="44" rx="5" fill="#F3F3F3" stroke="#DDDDDD" stroke-width="1"/>
-<rect x="411.0" y="387.3" width="44" height="44" rx="5" fill="#E8E8E8" stroke="#AAAAAA" stroke-width="1"/>
-<text x="433.0" y="409.3" text-anchor="middle" dominant-baseline="middle" font-size="10" fill="#333333">Bksp</text>
-<rect x="455.0" y="382.0" width="44" height="44" rx="5" fill="#E8E8E8" stroke="#AAAAAA" stroke-width="1"/>
-<text x="477.0" y="404.0" text-anchor="middle" dominant-baseline="middle" font-size="10" fill="#333333">[</text>
-<rect x="499.0" y="387.3" width="44" height="44" rx="5" fill="#E8E8E8" stroke="#AAAAAA" stroke-width="1"/>
-<text x="521.0" y="409.3" text-anchor="middle" dominant-baseline="middle" font-size="10" fill="#333333">]</text>
-<rect x="543.0" y="398.7" width="44" height="44" rx="5" fill="#E8E8E8" stroke="#AAAAAA" stroke-width="1"/>
-<text x="565.0" y="420.7" text-anchor="middle" dominant-baseline="middle" font-size="10" fill="#333333">\</text>
-<rect x="191.0" y="437.0" width="44" height="44" rx="5" fill="#F3F3F3" stroke="#DDDDDD" stroke-width="1"/>
-<rect x="235.0" y="441.4" width="44" height="44" rx="5" fill="#F3F3F3" stroke="#DDDDDD" stroke-width="1"/>
-<rect x="323.0" y="441.4" width="44" height="44" rx="5" fill="#F3F3F3" stroke="#DDDDDD" stroke-width="1"/>
-<rect x="367.0" y="437.0" width="44" height="44" rx="5" fill="#FFD78A" stroke="#C89B30" stroke-width="1"/>
-<text x="389.0" y="459.0" text-anchor="middle" dominant-baseline="middle" font-size="10" fill="#5A3D00">▼ Adj</text>
-<rect x="15" y="499" width="80" height="20" rx="9" fill="#27AE60"/>
-<text x="55" y="509.0" text-anchor="middle" dominant-baseline="middle" font-size="11" font-weight="bold" fill="white">Nav</text>
-<rect x="15.0" y="552.7" width="44" height="44" rx="5" fill="#E8E8E8" stroke="#AAAAAA" stroke-width="1"/>
-<text x="37.0" y="574.7" text-anchor="middle" dominant-baseline="middle" font-size="10" fill="#333333">1</text>
-<rect x="59.0" y="541.3" width="44" height="44" rx="5" fill="#E8E8E8" stroke="#AAAAAA" stroke-width="1"/>
-<text x="81.0" y="563.3" text-anchor="middle" dominant-baseline="middle" font-size="10" fill="#333333">2</text>
-<rect x="103.0" y="536.0" width="44" height="44" rx="5" fill="#E8E8E8" stroke="#AAAAAA" stroke-width="1"/>
-<text x="125.0" y="558.0" text-anchor="middle" dominant-baseline="middle" font-size="10" fill="#333333">3</text>
-<rect x="147.0" y="541.3" width="44" height="44" rx="5" fill="#E8E8E8" stroke="#AAAAAA" stroke-width="1"/>
-<text x="169.0" y="563.3" text-anchor="middle" dominant-baseline="middle" font-size="10" fill="#333333">4</text>
-<rect x="191.0" y="547.0" width="44" height="44" rx="5" fill="#E8E8E8" stroke="#AAAAAA" stroke-width="1"/>
-<text x="213.0" y="569.0" text-anchor="middle" dominant-baseline="middle" font-size="10" fill="#333333">5</text>
-<rect x="367.0" y="547.0" width="44" height="44" rx="5" fill="#E8E8E8" stroke="#AAAAAA" stroke-width="1"/>
-<text x="389.0" y="569.0" text-anchor="middle" dominant-baseline="middle" font-size="10" fill="#333333">6</text>
-<rect x="411.0" y="541.3" width="44" height="44" rx="5" fill="#E8E8E8" stroke="#AAAAAA" stroke-width="1"/>
-<text x="433.0" y="563.3" text-anchor="middle" dominant-baseline="middle" font-size="10" fill="#333333">7</text>
-<rect x="455.0" y="536.0" width="44" height="44" rx="5" fill="#E8E8E8" stroke="#AAAAAA" stroke-width="1"/>
-<text x="477.0" y="558.0" text-anchor="middle" dominant-baseline="middle" font-size="10" fill="#333333">8</text>
-<rect x="499.0" y="541.3" width="44" height="44" rx="5" fill="#E8E8E8" stroke="#AAAAAA" stroke-width="1"/>
-<text x="521.0" y="563.3" text-anchor="middle" dominant-baseline="middle" font-size="10" fill="#333333">9</text>
-<rect x="543.0" y="552.7" width="44" height="44" rx="5" fill="#E8E8E8" stroke="#AAAAAA" stroke-width="1"/>
-<text x="565.0" y="574.7" text-anchor="middle" dominant-baseline="middle" font-size="10" fill="#333333">0</text>
-<rect x="15.0" y="596.7" width="44" height="44" rx="5" fill="#E8E8E8" stroke="#AAAAAA" stroke-width="1"/>
-<text x="37.0" y="618.7" text-anchor="middle" dominant-baseline="middle" font-size="10" fill="#333333">⇧</text>
-<rect x="59.0" y="585.3" width="44" height="44" rx="5" fill="#E8E8E8" stroke="#AAAAAA" stroke-width="1"/>
-<text x="81.0" y="607.3" text-anchor="middle" dominant-baseline="middle" font-size="10" fill="#333333">⌃</text>
-<rect x="103.0" y="580.0" width="44" height="44" rx="5" fill="#E8E8E8" stroke="#AAAAAA" stroke-width="1"/>
-<text x="125.0" y="602.0" text-anchor="middle" dominant-baseline="middle" font-size="10" fill="#333333">⌘</text>
-<rect x="147.0" y="585.3" width="44" height="44" rx="5" fill="#E8E8E8" stroke="#AAAAAA" stroke-width="1"/>
-<text x="169.0" y="607.3" text-anchor="middle" dominant-baseline="middle" font-size="10" fill="#333333">⌥</text>
-<rect x="191.0" y="591.0" width="44" height="44" rx="5" fill="#E8E8E8" stroke="#AAAAAA" stroke-width="1"/>
-<text x="213.0" y="613.0" text-anchor="middle" dominant-baseline="middle" font-size="10" fill="#333333">6</text>
-<rect x="367.0" y="591.0" width="44" height="44" rx="5" fill="#B8D4F8" stroke="#6699CC" stroke-width="1"/>
-<text x="389.0" y="613.0" text-anchor="middle" dominant-baseline="middle" font-size="10" fill="#1A3A6A">←</text>
-<rect x="411.0" y="585.3" width="44" height="44" rx="5" fill="#C2D9F5" stroke="#7AABDE" stroke-width="1"/>
-<text x="433.0" y="602.9" text-anchor="middle" dominant-baseline="middle" font-size="10" fill="#1A3A5C">↓</text>
-<text x="433.0" y="617.0" text-anchor="middle" dominant-baseline="middle" font-size="8" fill="#1A3A5C" opacity="0.7">⌥ hold</text>
-<rect x="455.0" y="580.0" width="44" height="44" rx="5" fill="#C2D9F5" stroke="#7AABDE" stroke-width="1"/>
-<text x="477.0" y="597.6" text-anchor="middle" dominant-baseline="middle" font-size="10" fill="#1A3A5C">↑</text>
-<text x="477.0" y="611.7" text-anchor="middle" dominant-baseline="middle" font-size="8" fill="#1A3A5C" opacity="0.7">⌘ hold</text>
-<rect x="499.0" y="585.3" width="44" height="44" rx="5" fill="#C2D9F5" stroke="#7AABDE" stroke-width="1"/>
-<text x="521.0" y="602.9" text-anchor="middle" dominant-baseline="middle" font-size="10" fill="#1A3A5C">→</text>
-<text x="521.0" y="617.0" text-anchor="middle" dominant-baseline="middle" font-size="8" fill="#1A3A5C" opacity="0.7">⌃ hold</text>
-<rect x="543.0" y="596.7" width="44" height="44" rx="5" fill="#E8E8E8" stroke="#AAAAAA" stroke-width="1"/>
-<text x="565.0" y="618.7" text-anchor="middle" dominant-baseline="middle" font-size="10" fill="#333333">⇧</text>
-<rect x="15.0" y="640.7" width="44" height="44" rx="5" fill="#E8E8E8" stroke="#AAAAAA" stroke-width="1"/>
-<text x="37.0" y="662.7" text-anchor="middle" dominant-baseline="middle" font-size="10" fill="#333333">`</text>
-<rect x="59.0" y="629.3" width="44" height="44" rx="5" fill="#F3F3F3" stroke="#DDDDDD" stroke-width="1"/>
-<rect x="103.0" y="624.0" width="44" height="44" rx="5" fill="#F3F3F3" stroke="#DDDDDD" stroke-width="1"/>
-<rect x="147.0" y="629.3" width="44" height="44" rx="5" fill="#E8E8E8" stroke="#AAAAAA" stroke-width="1"/>
-<text x="169.0" y="651.3" text-anchor="middle" dominant-baseline="middle" font-size="10" fill="#333333">Del</text>
-<rect x="191.0" y="635.0" width="44" height="44" rx="5" fill="#F3F3F3" stroke="#DDDDDD" stroke-width="1"/>
-<rect x="367.0" y="635.0" width="44" height="44" rx="5" fill="#A8DFA8" stroke="#5A9E5A" stroke-width="1"/>
-<text x="389.0" y="657.0" text-anchor="middle" dominant-baseline="middle" font-size="10" fill="#1A4A1A">Boot</text>
-<rect x="411.0" y="629.3" width="44" height="44" rx="5" fill="#F3F3F3" stroke="#DDDDDD" stroke-width="1"/>
-<rect x="455.0" y="624.0" width="44" height="44" rx="5" fill="#F3F3F3" stroke="#DDDDDD" stroke-width="1"/>
-<rect x="499.0" y="629.3" width="44" height="44" rx="5" fill="#F3F3F3" stroke="#DDDDDD" stroke-width="1"/>
-<rect x="543.0" y="640.7" width="44" height="44" rx="5" fill="#F3F3F3" stroke="#DDDDDD" stroke-width="1"/>
-<rect x="191.0" y="679.0" width="44" height="44" rx="5" fill="#FFD78A" stroke="#C89B30" stroke-width="1"/>
-<text x="213.0" y="701.0" text-anchor="middle" dominant-baseline="middle" font-size="10" fill="#5A3D00">▼ Adj</text>
-<rect x="235.0" y="683.4" width="44" height="44" rx="5" fill="#F3F3F3" stroke="#DDDDDD" stroke-width="1"/>
-<rect x="323.0" y="683.4" width="44" height="44" rx="5" fill="#F3F3F3" stroke="#DDDDDD" stroke-width="1"/>
-<rect x="367.0" y="679.0" width="44" height="44" rx="5" fill="#F3F3F3" stroke="#DDDDDD" stroke-width="1"/>
-<rect x="15" y="741" width="80" height="20" rx="9" fill="#8E44AD"/>
-<text x="55" y="751.0" text-anchor="middle" dominant-baseline="middle" font-size="11" font-weight="bold" fill="white">Adjust</text>
-<rect x="15.0" y="794.7" width="44" height="44" rx="5" fill="#E8E8E8" stroke="#AAAAAA" stroke-width="1"/>
-<text x="37.0" y="816.7" text-anchor="middle" dominant-baseline="middle" font-size="10" fill="#333333">F1</text>
-<rect x="59.0" y="783.3" width="44" height="44" rx="5" fill="#E8E8E8" stroke="#AAAAAA" stroke-width="1"/>
-<text x="81.0" y="805.3" text-anchor="middle" dominant-baseline="middle" font-size="10" fill="#333333">F2</text>
-<rect x="103.0" y="778.0" width="44" height="44" rx="5" fill="#E8E8E8" stroke="#AAAAAA" stroke-width="1"/>
-<text x="125.0" y="800.0" text-anchor="middle" dominant-baseline="middle" font-size="10" fill="#333333">F3</text>
-<rect x="147.0" y="783.3" width="44" height="44" rx="5" fill="#E8E8E8" stroke="#AAAAAA" stroke-width="1"/>
-<text x="169.0" y="805.3" text-anchor="middle" dominant-baseline="middle" font-size="10" fill="#333333">F4</text>
-<rect x="191.0" y="789.0" width="44" height="44" rx="5" fill="#F3F3F3" stroke="#DDDDDD" stroke-width="1"/>
-<rect x="367.0" y="789.0" width="44" height="44" rx="5" fill="#F3F3F3" stroke="#DDDDDD" stroke-width="1"/>
-<rect x="411.0" y="783.3" width="44" height="44" rx="5" fill="#F3F3F3" stroke="#DDDDDD" stroke-width="1"/>
-<rect x="455.0" y="778.0" width="44" height="44" rx="5" fill="#F3F3F3" stroke="#DDDDDD" stroke-width="1"/>
-<rect x="499.0" y="783.3" width="44" height="44" rx="5" fill="#F3F3F3" stroke="#DDDDDD" stroke-width="1"/>
-<rect x="543.0" y="794.7" width="44" height="44" rx="5" fill="#F3F3F3" stroke="#DDDDDD" stroke-width="1"/>
-<rect x="15.0" y="838.7" width="44" height="44" rx="5" fill="#E8E8E8" stroke="#AAAAAA" stroke-width="1"/>
-<text x="37.0" y="860.7" text-anchor="middle" dominant-baseline="middle" font-size="10" fill="#333333">F5</text>
-<rect x="59.0" y="827.3" width="44" height="44" rx="5" fill="#E8E8E8" stroke="#AAAAAA" stroke-width="1"/>
-<text x="81.0" y="849.3" text-anchor="middle" dominant-baseline="middle" font-size="10" fill="#333333">F6</text>
-<rect x="103.0" y="822.0" width="44" height="44" rx="5" fill="#E8E8E8" stroke="#AAAAAA" stroke-width="1"/>
-<text x="125.0" y="844.0" text-anchor="middle" dominant-baseline="middle" font-size="10" fill="#333333">F7</text>
-<rect x="147.0" y="827.3" width="44" height="44" rx="5" fill="#E8E8E8" stroke="#AAAAAA" stroke-width="1"/>
-<text x="169.0" y="849.3" text-anchor="middle" dominant-baseline="middle" font-size="10" fill="#333333">F8</text>
-<rect x="191.0" y="833.0" width="44" height="44" rx="5" fill="#F3F3F3" stroke="#DDDDDD" stroke-width="1"/>
-<rect x="367.0" y="833.0" width="44" height="44" rx="5" fill="#F3F3F3" stroke="#DDDDDD" stroke-width="1"/>
-<rect x="411.0" y="827.3" width="44" height="44" rx="5" fill="#DDD0F0" stroke="#9980CC" stroke-width="1"/>
-<text x="433.0" y="849.3" text-anchor="middle" dominant-baseline="middle" font-size="10" fill="#2D1860">Vol−</text>
-<rect x="455.0" y="822.0" width="44" height="44" rx="5" fill="#DDD0F0" stroke="#9980CC" stroke-width="1"/>
-<text x="477.0" y="844.0" text-anchor="middle" dominant-baseline="middle" font-size="10" fill="#2D1860">Mute</text>
-<rect x="499.0" y="827.3" width="44" height="44" rx="5" fill="#DDD0F0" stroke="#9980CC" stroke-width="1"/>
-<text x="521.0" y="849.3" text-anchor="middle" dominant-baseline="middle" font-size="10" fill="#2D1860">Vol+</text>
-<rect x="543.0" y="838.7" width="44" height="44" rx="5" fill="#F3F3F3" stroke="#DDDDDD" stroke-width="1"/>
-<rect x="15.0" y="882.7" width="44" height="44" rx="5" fill="#E8E8E8" stroke="#AAAAAA" stroke-width="1"/>
-<text x="37.0" y="904.7" text-anchor="middle" dominant-baseline="middle" font-size="10" fill="#333333">F9</text>
-<rect x="59.0" y="871.3" width="44" height="44" rx="5" fill="#E8E8E8" stroke="#AAAAAA" stroke-width="1"/>
-<text x="81.0" y="893.3" text-anchor="middle" dominant-baseline="middle" font-size="10" fill="#333333">F10</text>
-<rect x="103.0" y="866.0" width="44" height="44" rx="5" fill="#E8E8E8" stroke="#AAAAAA" stroke-width="1"/>
-<text x="125.0" y="888.0" text-anchor="middle" dominant-baseline="middle" font-size="10" fill="#333333">F11</text>
-<rect x="147.0" y="871.3" width="44" height="44" rx="5" fill="#E8E8E8" stroke="#AAAAAA" stroke-width="1"/>
-<text x="169.0" y="893.3" text-anchor="middle" dominant-baseline="middle" font-size="10" fill="#333333">F12</text>
-<rect x="191.0" y="877.0" width="44" height="44" rx="5" fill="#F3F3F3" stroke="#DDDDDD" stroke-width="1"/>
-<rect x="367.0" y="877.0" width="44" height="44" rx="5" fill="#F5C0C0" stroke="#CC6666" stroke-width="1"/>
-<text x="389.0" y="899.0" text-anchor="middle" dominant-baseline="middle" font-size="10" fill="#500000">BT 0</text>
-<rect x="411.0" y="871.3" width="44" height="44" rx="5" fill="#DDD0F0" stroke="#9980CC" stroke-width="1"/>
-<text x="433.0" y="893.3" text-anchor="middle" dominant-baseline="middle" font-size="10" fill="#2D1860">⏮</text>
-<rect x="455.0" y="866.0" width="44" height="44" rx="5" fill="#DDD0F0" stroke="#9980CC" stroke-width="1"/>
-<text x="477.0" y="888.0" text-anchor="middle" dominant-baseline="middle" font-size="10" fill="#2D1860">⏯</text>
-<rect x="499.0" y="871.3" width="44" height="44" rx="5" fill="#DDD0F0" stroke="#9980CC" stroke-width="1"/>
-<text x="521.0" y="893.3" text-anchor="middle" dominant-baseline="middle" font-size="10" fill="#2D1860">⏭</text>
-<rect x="543.0" y="882.7" width="44" height="44" rx="5" fill="#F5C0C0" stroke="#CC6666" stroke-width="1"/>
-<text x="565.0" y="904.7" text-anchor="middle" dominant-baseline="middle" font-size="10" fill="#500000">BT CLR</text>
-<rect x="191.0" y="921.0" width="44" height="44" rx="5" fill="#F3F3F3" stroke="#DDDDDD" stroke-width="1"/>
-<rect x="235.0" y="925.4" width="44" height="44" rx="5" fill="#F3F3F3" stroke="#DDDDDD" stroke-width="1"/>
-<rect x="323.0" y="925.4" width="44" height="44" rx="5" fill="#F3F3F3" stroke="#DDDDDD" stroke-width="1"/>
-<rect x="367.0" y="921.0" width="44" height="44" rx="5" fill="#F3F3F3" stroke="#DDDDDD" stroke-width="1"/>
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="820" height="1370" viewBox="0 0 820 1370" role="img" aria-labelledby="title desc">
+  <title id="title">Kometa keymap layout</title>
+  <desc id="desc">Four-layer layout diagram for the Kometa ZMK keymap.</desc>
+  <defs>
+    <g id="key-normal">
+      <rect class="key-normal" width="48" height="42" rx="6" ry="6"/>
+    </g>
+    <g id="key-layer-red">
+      <rect class="key-layer-red" width="48" height="42" rx="6" ry="6"/>
+    </g>
+    <g id="key-layer-gold">
+      <rect class="key-layer-gold" width="48" height="42" rx="6" ry="6"/>
+    </g>
+    <g id="key-layer-blue">
+      <rect class="key-layer-blue" width="48" height="42" rx="6" ry="6"/>
+    </g>
+    <g id="key-special">
+      <rect class="key-special" width="48" height="42" rx="6" ry="6"/>
+    </g>
+    <g id="key-empty">
+      <rect class="key-empty" width="48" height="42" rx="6" ry="6"/>
+    </g>
+    <style>
+      .sheet { fill: #10141b; }
+      .layer-panel { fill: #151b24; stroke: #293241; stroke-width: 1; }
+      .bar-base { fill: #3f4a59; stroke: #556173; }
+      .bar-sym { fill: #a20025; stroke: #6f0000; }
+      .bar-nav { fill: #d9a725; stroke: #b08312; }
+      .bar-adj { fill: #5c8cca; stroke: #456893; }
+      .key-normal { fill: #383e47; stroke: #05070a; stroke-width: 1; }
+      .key-layer-red { fill: #a20025; stroke: #6f0000; stroke-width: 1; }
+      .key-layer-gold { fill: #d9a725; stroke: #b08312; stroke-width: 1; }
+      .key-layer-blue { fill: #5c8cca; stroke: #456893; stroke-width: 1; }
+      .key-special { fill: #495566; stroke: #121820; stroke-width: 1; }
+      .key-empty { fill: #202833; stroke: #596170; stroke-width: 1; stroke-dasharray: 4 4; }
+      .title-text { fill: #ffffff; font: 700 16px Verdana, Arial, sans-serif; text-anchor: middle; dominant-baseline: middle; }
+      .note-text { fill: #aeb9c8; font: 12px Verdana, Arial, sans-serif; text-anchor: middle; dominant-baseline: middle; }
+      .key-text { fill: #edf2f7; font: 700 15px Verdana, Arial, sans-serif; text-anchor: middle; dominant-baseline: middle; }
+      .key-text-dark { fill: #111820; font: 700 14px Verdana, Arial, sans-serif; text-anchor: middle; dominant-baseline: middle; }
+      .key-text-small { fill: #edf2f7; font: 700 10px Verdana, Arial, sans-serif; text-anchor: middle; dominant-baseline: middle; }
+      .key-text-dark-small { fill: #111820; font: 700 10px Verdana, Arial, sans-serif; text-anchor: middle; dominant-baseline: middle; }
+      .key-sub { fill: #9fb0c3; font: 700 8.5px Verdana, Arial, sans-serif; text-anchor: middle; dominant-baseline: middle; }
+      .combo-text { fill: #7ea6e0; font: 12px Verdana, Arial, sans-serif; text-anchor: middle; dominant-baseline: middle; }
+    </style>
+  </defs>
+
+  <rect class="sheet" width="820" height="1370"/>
+
+  <g id="base-layer" transform="translate(0 0)">
+    <rect class="layer-panel" x="32" y="12" width="756" height="320" rx="8" ry="8"/>
+    <rect class="bar-base" x="305" y="28" width="210" height="30" rx="4" ry="4"/>
+    <text class="title-text" x="410" y="43">Base</text>
+    <text class="note-text" x="410" y="72">QWERTY with balanced home row mods</text>
+
+    <g transform="translate(40 98)"><use href="#key-empty"/></g>
+    <g transform="translate(88 92)"><use href="#key-normal"/><text class="key-text" x="24" y="21">Q</text></g>
+    <g transform="translate(136 77)"><use href="#key-normal"/><text class="key-text" x="24" y="21">W</text></g>
+    <g transform="translate(184 70)"><use href="#key-normal"/><text class="key-text" x="24" y="21">E</text></g>
+    <g transform="translate(232 77)"><use href="#key-normal"/><text class="key-text" x="24" y="21">R</text></g>
+    <g transform="translate(280 85)"><use href="#key-normal"/><text class="key-text" x="24" y="21">T</text></g>
+    <g transform="translate(472 85)"><use href="#key-normal"/><text class="key-text" x="24" y="21">Y</text></g>
+    <g transform="translate(520 77)"><use href="#key-normal"/><text class="key-text" x="24" y="21">U</text></g>
+    <g transform="translate(568 70)"><use href="#key-normal"/><text class="key-text" x="24" y="21">I</text></g>
+    <g transform="translate(616 77)"><use href="#key-normal"/><text class="key-text" x="24" y="21">O</text></g>
+    <g transform="translate(664 92)"><use href="#key-normal"/><text class="key-text" x="24" y="21">P</text></g>
+    <g transform="translate(712 98)"><use href="#key-empty"/></g>
+
+    <g transform="translate(40 157)"><use href="#key-empty"/></g>
+    <g transform="translate(88 151)"><use href="#key-normal"/><text class="key-text-small" x="24" y="17">A</text><text class="key-sub" x="24" y="30">Sft</text></g>
+    <g transform="translate(136 136)"><use href="#key-normal"/><text class="key-text-small" x="24" y="17">S</text><text class="key-sub" x="24" y="30">Ctl</text></g>
+    <g transform="translate(184 129)"><use href="#key-normal"/><text class="key-text-small" x="24" y="17">D</text><text class="key-sub" x="24" y="30">Gui</text></g>
+    <g transform="translate(232 136)"><use href="#key-normal"/><text class="key-text-small" x="24" y="17">F</text><text class="key-sub" x="24" y="30">Alt</text></g>
+    <g transform="translate(280 144)"><use href="#key-normal"/><text class="key-text" x="24" y="21">G</text></g>
+    <g transform="translate(472 144)"><use href="#key-normal"/><text class="key-text" x="24" y="21">H</text></g>
+    <g transform="translate(520 136)"><use href="#key-normal"/><text class="key-text-small" x="24" y="17">J</text><text class="key-sub" x="24" y="30">Alt</text></g>
+    <g transform="translate(568 129)"><use href="#key-normal"/><text class="key-text-small" x="24" y="17">K</text><text class="key-sub" x="24" y="30">Gui</text></g>
+    <g transform="translate(616 136)"><use href="#key-normal"/><text class="key-text-small" x="24" y="17">L</text><text class="key-sub" x="24" y="30">Ctl</text></g>
+    <g transform="translate(664 151)"><use href="#key-normal"/><text class="key-text-small" x="24" y="17">;</text><text class="key-sub" x="24" y="30">Sft</text></g>
+    <g transform="translate(712 157)"><use href="#key-empty"/></g>
+
+    <g transform="translate(40 216)"><use href="#key-empty"/></g>
+    <g transform="translate(88 210)"><use href="#key-normal"/><text class="key-text" x="24" y="21">Z</text></g>
+    <g transform="translate(136 195)"><use href="#key-normal"/><text class="key-text" x="24" y="21">X</text></g>
+    <g transform="translate(184 188)"><use href="#key-normal"/><text class="key-text" x="24" y="21">C</text></g>
+    <g transform="translate(232 195)"><use href="#key-normal"/><text class="key-text" x="24" y="21">V</text></g>
+    <g transform="translate(280 203)"><use href="#key-normal"/><text class="key-text" x="24" y="21">B</text></g>
+    <g transform="translate(472 203)"><use href="#key-normal"/><text class="key-text" x="24" y="21">N</text></g>
+    <g transform="translate(520 195)"><use href="#key-normal"/><text class="key-text" x="24" y="21">M</text></g>
+    <g transform="translate(568 188)"><use href="#key-normal"/><text class="key-text" x="24" y="21">,</text></g>
+    <g transform="translate(616 195)"><use href="#key-normal"/><text class="key-text" x="24" y="21">.</text></g>
+    <g transform="translate(664 210)"><use href="#key-normal"/><text class="key-text" x="24" y="21">/</text></g>
+    <g transform="translate(712 216)"><use href="#key-empty"/></g>
+
+    <g transform="translate(232 254)"><use href="#key-empty"/></g>
+    <g transform="translate(280 262) rotate(15 24 21)"><use href="#key-layer-red"/><text class="key-text" x="24" y="21">Sym</text></g>
+    <g transform="translate(328 268) rotate(30 24 21)"><use href="#key-special"/><text class="key-text-small" x="24" y="21">Space</text></g>
+    <g transform="translate(424 268) rotate(-30 24 21)"><use href="#key-special"/><text class="key-text-small" x="24" y="21">Enter</text></g>
+    <g transform="translate(472 262) rotate(-15 24 21)"><use href="#key-layer-gold"/><text class="key-text-dark" x="24" y="21">Nav</text></g>
+    <g transform="translate(520 254)"><use href="#key-empty"/></g>
+
+    <text class="combo-text" x="410" y="314">Combos: D+K = Esc | A+; = Caps | E+I = Lang</text>
+  </g>
+
+  <g id="symbols-layer" transform="translate(0 340)">
+    <rect class="layer-panel" x="32" y="12" width="756" height="320" rx="8" ry="8"/>
+    <rect class="bar-sym" x="305" y="28" width="210" height="30" rx="4" ry="4"/>
+    <text class="title-text" x="410" y="43">Symbols</text>
+    <text class="note-text" x="410" y="72">Hold left thumb from Base</text>
+
+    <g transform="translate(40 98)"><use href="#key-empty"/></g>
+    <g transform="translate(88 92)"><use href="#key-normal"/><text class="key-text" x="24" y="21">!</text></g>
+    <g transform="translate(136 77)"><use href="#key-normal"/><text class="key-text" x="24" y="21">@</text></g>
+    <g transform="translate(184 70)"><use href="#key-normal"/><text class="key-text" x="24" y="21">#</text></g>
+    <g transform="translate(232 77)"><use href="#key-normal"/><text class="key-text" x="24" y="21">$</text></g>
+    <g transform="translate(280 85)"><use href="#key-normal"/><text class="key-text" x="24" y="21">%</text></g>
+    <g transform="translate(472 85)"><use href="#key-empty"/></g>
+    <g transform="translate(520 77)"><use href="#key-normal"/><text class="key-text" x="24" y="21">&amp;</text></g>
+    <g transform="translate(568 70)"><use href="#key-normal"/><text class="key-text" x="24" y="21">*</text></g>
+    <g transform="translate(616 77)"><use href="#key-normal"/><text class="key-text" x="24" y="21">(</text></g>
+    <g transform="translate(664 92)"><use href="#key-normal"/><text class="key-text" x="24" y="21">)</text></g>
+    <g transform="translate(712 98)"><use href="#key-empty"/></g>
+
+    <g transform="translate(40 157)"><use href="#key-empty"/></g>
+    <g transform="translate(88 151)"><use href="#key-special"/><text class="key-text-small" x="24" y="17">Esc</text><text class="key-sub" x="24" y="30">Sft</text></g>
+    <g transform="translate(136 136)"><use href="#key-normal"/><text class="key-text-small" x="24" y="21">LCtl</text></g>
+    <g transform="translate(184 129)"><use href="#key-normal"/><text class="key-text-small" x="24" y="21">LGui</text></g>
+    <g transform="translate(232 136)"><use href="#key-normal"/><text class="key-text-small" x="24" y="21">LAlt</text></g>
+    <g transform="translate(280 144)"><use href="#key-normal"/><text class="key-text" x="24" y="21">^</text></g>
+    <g transform="translate(472 144)"><use href="#key-normal"/><text class="key-text" x="24" y="21">-</text></g>
+    <g transform="translate(520 136)"><use href="#key-normal"/><text class="key-text-small" x="24" y="17">=</text><text class="key-sub" x="24" y="30">Alt</text></g>
+    <g transform="translate(568 129)"><use href="#key-normal"/><text class="key-text-small" x="24" y="17">{</text><text class="key-sub" x="24" y="30">Gui</text></g>
+    <g transform="translate(616 136)"><use href="#key-normal"/><text class="key-text-small" x="24" y="17">}</text><text class="key-sub" x="24" y="30">Ctl</text></g>
+    <g transform="translate(664 151)"><use href="#key-normal"/><text class="key-text-small" x="24" y="17">&#x27;</text><text class="key-sub" x="24" y="30">Sft</text></g>
+    <g transform="translate(712 157)"><use href="#key-empty"/></g>
+
+    <g transform="translate(40 216)"><use href="#key-empty"/></g>
+    <g transform="translate(88 210)"><use href="#key-special"/><text class="key-text" x="24" y="21">Tab</text></g>
+    <g transform="translate(136 195)"><use href="#key-empty"/></g>
+    <g transform="translate(184 188)"><use href="#key-empty"/></g>
+    <g transform="translate(232 195)"><use href="#key-empty"/></g>
+    <g transform="translate(280 203)"><use href="#key-layer-blue"/><text class="key-text-dark-small" x="24" y="21">Boot</text></g>
+    <g transform="translate(472 203)"><use href="#key-empty"/></g>
+    <g transform="translate(520 195)"><use href="#key-special"/><text class="key-text-small" x="24" y="21">Bspc</text></g>
+    <g transform="translate(568 188)"><use href="#key-normal"/><text class="key-text" x="24" y="21">[</text></g>
+    <g transform="translate(616 195)"><use href="#key-normal"/><text class="key-text" x="24" y="21">]</text></g>
+    <g transform="translate(664 210)"><use href="#key-normal"/><text class="key-text" x="24" y="21">\</text></g>
+    <g transform="translate(712 216)"><use href="#key-empty"/></g>
+
+    <g transform="translate(232 254)"><use href="#key-empty"/></g>
+    <g transform="translate(280 262) rotate(15 24 21)"><use href="#key-empty"/></g>
+    <g transform="translate(328 268) rotate(30 24 21)"><use href="#key-empty"/></g>
+    <g transform="translate(424 268) rotate(-30 24 21)"><use href="#key-empty"/></g>
+    <g transform="translate(472 262) rotate(-15 24 21)"><use href="#key-layer-blue"/><text class="key-text-dark-small" x="24" y="21">Adjust</text></g>
+    <g transform="translate(520 254)"><use href="#key-empty"/></g>
+  </g>
+
+  <g id="nav-layer" transform="translate(0 680)">
+    <rect class="layer-panel" x="32" y="12" width="756" height="320" rx="8" ry="8"/>
+    <rect class="bar-nav" x="305" y="28" width="210" height="30" rx="4" ry="4"/>
+    <text class="title-text" x="410" y="43">Nav</text>
+    <text class="note-text" x="410" y="72">Hold right thumb from Base</text>
+
+    <g transform="translate(40 98)"><use href="#key-empty"/></g>
+    <g transform="translate(88 92)"><use href="#key-normal"/><text class="key-text" x="24" y="21">1</text></g>
+    <g transform="translate(136 77)"><use href="#key-normal"/><text class="key-text" x="24" y="21">2</text></g>
+    <g transform="translate(184 70)"><use href="#key-normal"/><text class="key-text" x="24" y="21">3</text></g>
+    <g transform="translate(232 77)"><use href="#key-normal"/><text class="key-text" x="24" y="21">4</text></g>
+    <g transform="translate(280 85)"><use href="#key-normal"/><text class="key-text" x="24" y="21">5</text></g>
+    <g transform="translate(472 85)"><use href="#key-normal"/><text class="key-text" x="24" y="21">6</text></g>
+    <g transform="translate(520 77)"><use href="#key-normal"/><text class="key-text" x="24" y="21">7</text></g>
+    <g transform="translate(568 70)"><use href="#key-normal"/><text class="key-text" x="24" y="21">8</text></g>
+    <g transform="translate(616 77)"><use href="#key-normal"/><text class="key-text" x="24" y="21">9</text></g>
+    <g transform="translate(664 92)"><use href="#key-normal"/><text class="key-text" x="24" y="21">0</text></g>
+    <g transform="translate(712 98)"><use href="#key-empty"/></g>
+
+    <g transform="translate(40 157)"><use href="#key-empty"/></g>
+    <g transform="translate(88 151)"><use href="#key-normal"/><text class="key-text-small" x="24" y="21">LSft</text></g>
+    <g transform="translate(136 136)"><use href="#key-normal"/><text class="key-text-small" x="24" y="21">LCtl</text></g>
+    <g transform="translate(184 129)"><use href="#key-normal"/><text class="key-text-small" x="24" y="21">LGui</text></g>
+    <g transform="translate(232 136)"><use href="#key-normal"/><text class="key-text-small" x="24" y="21">LAlt</text></g>
+    <g transform="translate(280 144)"><use href="#key-normal"/><text class="key-text" x="24" y="21">6</text></g>
+    <g transform="translate(472 144)"><use href="#key-special"/><text class="key-text-small" x="24" y="21">Left</text></g>
+    <g transform="translate(520 136)"><use href="#key-special"/><text class="key-text-small" x="24" y="17">Down</text><text class="key-sub" x="24" y="30">Alt</text></g>
+    <g transform="translate(568 129)"><use href="#key-special"/><text class="key-text-small" x="24" y="17">Up</text><text class="key-sub" x="24" y="30">Gui</text></g>
+    <g transform="translate(616 136)"><use href="#key-special"/><text class="key-text-small" x="24" y="17">Right</text><text class="key-sub" x="24" y="30">Ctl</text></g>
+    <g transform="translate(664 151)"><use href="#key-normal"/><text class="key-text-small" x="24" y="21">RSft</text></g>
+    <g transform="translate(712 157)"><use href="#key-empty"/></g>
+
+    <g transform="translate(40 216)"><use href="#key-empty"/></g>
+    <g transform="translate(88 210)"><use href="#key-normal"/><text class="key-text" x="24" y="21">`</text></g>
+    <g transform="translate(136 195)"><use href="#key-empty"/><text class="key-text-small" x="24" y="21">TRNS</text></g>
+    <g transform="translate(184 188)"><use href="#key-empty"/><text class="key-text-small" x="24" y="21">TRNS</text></g>
+    <g transform="translate(232 195)"><use href="#key-special"/><text class="key-text" x="24" y="21">Del</text></g>
+    <g transform="translate(280 203)"><use href="#key-empty"/><text class="key-text-small" x="24" y="21">TRNS</text></g>
+    <g transform="translate(472 203)"><use href="#key-layer-blue"/><text class="key-text-dark-small" x="24" y="21">Boot</text></g>
+    <g transform="translate(520 195)"><use href="#key-empty"/></g>
+    <g transform="translate(568 188)"><use href="#key-empty"/></g>
+    <g transform="translate(616 195)"><use href="#key-empty"/></g>
+    <g transform="translate(664 210)"><use href="#key-empty"/></g>
+    <g transform="translate(712 216)"><use href="#key-empty"/></g>
+
+    <g transform="translate(232 254)"><use href="#key-empty"/></g>
+    <g transform="translate(280 262) rotate(15 24 21)"><use href="#key-layer-blue"/><text class="key-text-dark-small" x="24" y="21">Adjust</text></g>
+    <g transform="translate(328 268) rotate(30 24 21)"><use href="#key-empty"/></g>
+    <g transform="translate(424 268) rotate(-30 24 21)"><use href="#key-empty"/></g>
+    <g transform="translate(472 262) rotate(-15 24 21)"><use href="#key-empty"/></g>
+    <g transform="translate(520 254)"><use href="#key-empty"/></g>
+  </g>
+
+  <g id="adjust-layer" transform="translate(0 1020)">
+    <rect class="layer-panel" x="32" y="12" width="756" height="320" rx="8" ry="8"/>
+    <rect class="bar-adj" x="305" y="28" width="210" height="30" rx="4" ry="4"/>
+    <text class="title-text" x="410" y="43">Adjust</text>
+    <text class="note-text" x="410" y="72">From Symbols right thumb or Nav left thumb</text>
+
+    <g transform="translate(40 98)"><use href="#key-empty"/></g>
+    <g transform="translate(88 92)"><use href="#key-normal"/><text class="key-text" x="24" y="21">F1</text></g>
+    <g transform="translate(136 77)"><use href="#key-normal"/><text class="key-text" x="24" y="21">F2</text></g>
+    <g transform="translate(184 70)"><use href="#key-normal"/><text class="key-text" x="24" y="21">F3</text></g>
+    <g transform="translate(232 77)"><use href="#key-normal"/><text class="key-text" x="24" y="21">F4</text></g>
+    <g transform="translate(280 85)"><use href="#key-empty"/></g>
+    <g transform="translate(472 85)"><use href="#key-empty"/></g>
+    <g transform="translate(520 77)"><use href="#key-empty"/></g>
+    <g transform="translate(568 70)"><use href="#key-empty"/></g>
+    <g transform="translate(616 77)"><use href="#key-empty"/></g>
+    <g transform="translate(664 92)"><use href="#key-empty"/></g>
+    <g transform="translate(712 98)"><use href="#key-empty"/></g>
+
+    <g transform="translate(40 157)"><use href="#key-empty"/></g>
+    <g transform="translate(88 151)"><use href="#key-normal"/><text class="key-text" x="24" y="21">F5</text></g>
+    <g transform="translate(136 136)"><use href="#key-normal"/><text class="key-text" x="24" y="21">F6</text></g>
+    <g transform="translate(184 129)"><use href="#key-normal"/><text class="key-text" x="24" y="21">F7</text></g>
+    <g transform="translate(232 136)"><use href="#key-normal"/><text class="key-text" x="24" y="21">F8</text></g>
+    <g transform="translate(280 144)"><use href="#key-empty"/></g>
+    <g transform="translate(472 144)"><use href="#key-empty"/></g>
+    <g transform="translate(520 136)"><use href="#key-special"/><text class="key-text-small" x="24" y="21">Vol-</text></g>
+    <g transform="translate(568 129)"><use href="#key-special"/><text class="key-text-small" x="24" y="21">Mute</text></g>
+    <g transform="translate(616 136)"><use href="#key-special"/><text class="key-text-small" x="24" y="21">Vol+</text></g>
+    <g transform="translate(664 151)"><use href="#key-empty"/></g>
+    <g transform="translate(712 157)"><use href="#key-empty"/></g>
+
+    <g transform="translate(40 216)"><use href="#key-empty"/></g>
+    <g transform="translate(88 210)"><use href="#key-normal"/><text class="key-text" x="24" y="21">F9</text></g>
+    <g transform="translate(136 195)"><use href="#key-normal"/><text class="key-text" x="24" y="21">F10</text></g>
+    <g transform="translate(184 188)"><use href="#key-normal"/><text class="key-text" x="24" y="21">F11</text></g>
+    <g transform="translate(232 195)"><use href="#key-normal"/><text class="key-text" x="24" y="21">F12</text></g>
+    <g transform="translate(280 203)"><use href="#key-empty"/></g>
+    <g transform="translate(472 203)"><use href="#key-layer-blue"/><text class="key-text-dark-small" x="24" y="17">BT</text><text class="key-sub" x="24" y="30">0</text></g>
+    <g transform="translate(520 195)"><use href="#key-special"/><text class="key-text-small" x="24" y="21">Prev</text></g>
+    <g transform="translate(568 188)"><use href="#key-special"/><text class="key-text-small" x="24" y="21">Play</text></g>
+    <g transform="translate(616 195)"><use href="#key-special"/><text class="key-text-small" x="24" y="21">Next</text></g>
+    <g transform="translate(664 210)"><use href="#key-layer-blue"/><text class="key-text-dark-small" x="24" y="17">BT</text><text class="key-sub" x="24" y="30">CLR</text></g>
+    <g transform="translate(712 216)"><use href="#key-empty"/></g>
+
+    <g transform="translate(232 254)"><use href="#key-empty"/></g>
+    <g transform="translate(280 262) rotate(15 24 21)"><use href="#key-empty"/></g>
+    <g transform="translate(328 268) rotate(30 24 21)"><use href="#key-empty"/></g>
+    <g transform="translate(424 268) rotate(-30 24 21)"><use href="#key-empty"/></g>
+    <g transform="translate(472 262) rotate(-15 24 21)"><use href="#key-empty"/></g>
+    <g transform="translate(520 254)"><use href="#key-empty"/></g>
+  </g>
 </svg>
