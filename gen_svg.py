@@ -1,238 +1,269 @@
 #!/usr/bin/env python3
-"""Generate SVG keymap diagram for Kometa keyboard."""
+"""Generate a Sweep-style SVG keymap diagram for the Kometa keyboard."""
 
-SCALE = 0.44
-MARGIN_X = 15
-MARGIN_Y = 15
-KEY_W = 44
-KEY_H = 44
-KEY_R = 5  # corner radius
+from html import escape
 
-COLORS = {
-    "default": ("#E8E8E8", "#AAAAAA", "#333333"),   # fill, stroke, text
-    "home_mod": ("#C2D9F5", "#7AABDE", "#1A3A5C"),
-    "layer": ("#FFD78A", "#C89B30", "#5A3D00"),
-    "special": ("#A8DFA8", "#5A9E5A", "#1A4A1A"),
-    "empty": ("#F3F3F3", "#DDDDDD", "#AAAAAA"),
-    "nav": ("#B8D4F8", "#6699CC", "#1A3A6A"),
-    "media": ("#DDD0F0", "#9980CC", "#2D1860"),
-    "bt": ("#F5C0C0", "#CC6666", "#500000"),
+
+SVG_WIDTH = 820
+SVG_HEIGHT = 1370
+KEY_W = 48
+KEY_H = 42
+KEY_CENTER_X = KEY_W / 2
+KEY_CENTER_Y = KEY_H / 2
+
+PANEL_X = 32
+PANEL_Y = 12
+PANEL_W = 756
+PANEL_H = 320
+LAYER_STRIDE = 340
+
+POS_X_OFFSET = 40
+POS_X_SCALE = 0.48
+POS_Y_OFFSET = 70
+POS_Y_SCALE = 0.59
+
+THUMB_ROTATIONS = {
+    36: 0,
+    37: 15,
+    38: 30,
+    39: -30,
+    40: -15,
+    41: 0,
 }
 
 
-def key_svg(x, y, label1, label2, style):
-    fill, stroke, text_color = COLORS.get(style, COLORS["default"])
-    parts = []
-    parts.append(
-        f'<rect x="{x:.1f}" y="{y:.1f}" width="{KEY_W}" height="{KEY_H}" '
-        f'rx="{KEY_R}" fill="{fill}" stroke="{stroke}" stroke-width="1"/>'
-    )
-    if label1:
-        if label2:
-            parts.append(
-                f'<text x="{x + KEY_W/2:.1f}" y="{y + KEY_H * 0.40:.1f}" '
-                f'text-anchor="middle" dominant-baseline="middle" '
-                f'font-size="10" fill="{text_color}">{label1}</text>'
-            )
-            parts.append(
-                f'<text x="{x + KEY_W/2:.1f}" y="{y + KEY_H * 0.72:.1f}" '
-                f'text-anchor="middle" dominant-baseline="middle" '
-                f'font-size="8" fill="{text_color}" opacity="0.7">{label2}</text>'
-            )
-        else:
-            parts.append(
-                f'<text x="{x + KEY_W/2:.1f}" y="{y + KEY_H/2:.1f}" '
-                f'text-anchor="middle" dominant-baseline="middle" '
-                f'font-size="10" fill="{text_color}">{label1}</text>'
-            )
-    return "\n".join(parts)
+def k(label="", sub="", style="normal"):
+    return {"label": label, "sub": sub, "style": style}
 
 
-def pos(dtsi_x, dtsi_y):
-    """Convert dtsi physical layout coordinates to SVG coordinates."""
-    sx = (dtsi_x - 100) * SCALE + MARGIN_X
-    sy = dtsi_y * SCALE + MARGIN_Y
-    return sx, sy
+def empty(label="", sub=""):
+    return k(label, sub, "empty")
 
 
-# Physical positions from kometa.dtsi (excluding outer none columns 0 and 11)
-# Each entry: (dtsi_x, dtsi_y)
+# Full 42-key physical layout from boards/shields/kometa/kometa.dtsi:
+# three 12-key rows plus six thumb keys. Positions mapped from RC order.
 PHYS = [
-    # Row 0 – top row
-    (100,  38), (200,  12), (300,   0), (400,  12), (500,  25),   # Q W E R T
-    (900,  25), (1000, 12), (1100,  0), (1200, 12), (1300, 38),   # Y U I O P
-    # Row 1 – home row
-    (100, 138), (200, 112), (300, 100), (400, 112), (500, 125),   # A S D F G
-    (900, 125), (1000,112), (1100,100), (1200,112), (1300,138),   # H J K L ;
-    # Row 2 – bottom row
-    (100, 238), (200, 212), (300, 200), (400, 212), (500, 225),   # Z X C V B
-    (900, 225), (1000,212), (1100,200), (1200,212), (1300,238),   # N M , . /
-    # Thumbs (inner 4; outer 2 are &none and skipped)
-    (500, 325), (600, 335),                                        # Sym, Spc
-    (800, 335), (900, 325),                                        # Ent, Nav
+    # Row 0
+    (0, 48), (100, 38), (200, 12), (300, 0), (400, 12), (500, 25),
+    (900, 25), (1000, 12), (1100, 0), (1200, 12), (1300, 38), (1400, 48),
+    # Row 1
+    (0, 148), (100, 138), (200, 112), (300, 100), (400, 112), (500, 125),
+    (900, 125), (1000, 112), (1100, 100), (1200, 112), (1300, 138), (1400, 148),
+    # Row 2
+    (0, 248), (100, 238), (200, 212), (300, 200), (400, 212), (500, 225),
+    (900, 225), (1000, 212), (1100, 200), (1200, 212), (1300, 238), (1400, 248),
+    # Thumbs
+    (400, 312), (500, 325), (600, 335), (800, 335), (900, 325), (1000, 312),
 ]
 
-# Layers: each key is (label_line1, label_line2_or_empty, style)
+
 LAYERS = [
     {
+        "id": "base-layer",
         "name": "Base",
-        "indicator": "#4A90D9",
+        "bar": "bar-base",
+        "note": "QWERTY with balanced home row mods",
+        "combo": "Combos: D+K = Esc | A+; = Caps | E+I = Lang",
         "keys": [
-            # Row 0
-            ("Q","","default"), ("W","","default"), ("E","","default"), ("R","","default"), ("T","","default"),
-            ("Y","","default"), ("U","","default"), ("I","","default"), ("O","","default"), ("P","","default"),
-            # Row 1
-            ("A","⇧ hold","home_mod"), ("S","⌃ hold","home_mod"), ("D","⌘ hold","home_mod"), ("F","⌥ hold","home_mod"), ("G","","default"),
-            ("H","","default"), ("J","⌥ hold","home_mod"), ("K","⌘ hold","home_mod"), ("L","⌃ hold","home_mod"), (";","⇧ hold","home_mod"),
-            # Row 2
-            ("Z","","default"), ("X","","default"), ("C","","default"), ("V","","default"), ("B","","default"),
-            ("N","","default"), ("M","","default"), (",","","default"), (".","","default"), ("/","","default"),
-            # Thumbs
-            ("▼ Sym","","layer"), ("Space","","default"),
-            ("Enter","","default"), ("▼ Nav","","layer"),
+            empty(), k("Q"), k("W"), k("E"), k("R"), k("T"),
+            k("Y"), k("U"), k("I"), k("O"), k("P"), empty(),
+            empty(), k("A", "Sft"), k("S", "Ctl"), k("D", "Gui"), k("F", "Alt"), k("G"),
+            k("H"), k("J", "Alt"), k("K", "Gui"), k("L", "Ctl"), k(";", "Sft"), empty(),
+            empty(), k("Z"), k("X"), k("C"), k("V"), k("B"),
+            k("N"), k("M"), k(","), k("."), k("/"), empty(),
+            empty(), k("Sym", style="layer-red"), k("Space", style="special"),
+            k("Enter", style="special"), k("Nav", style="layer-gold"), empty(),
         ],
     },
     {
+        "id": "symbols-layer",
         "name": "Symbols",
-        "indicator": "#E67E22",
+        "bar": "bar-sym",
+        "note": "Hold left thumb from Base",
         "keys": [
-            # Row 0
-            ("!","","default"), ("@","","default"), ("#","","default"), ("$","","default"), ("%","","default"),
-            ("","","empty"),    ("&amp;","","default"), ("*","","default"), ("(","","default"), (")","","default"),
-            # Row 1
-            ("Esc","⇧ hold","home_mod"), ("⌃","","default"), ("⌘","","default"), ("⌥","","default"), ("^","","default"),
-            ("−","","default"), ("=","⌥ hold","home_mod"), ("{","⌘ hold","home_mod"), ("}","⌃ hold","home_mod"), ("'","⇧ hold","home_mod"),
-            # Row 2
-            ("Tab","","default"), ("","","empty"), ("","","empty"), ("","","empty"), ("Boot","","special"),
-            ("","","empty"), ("Bksp","","default"), ("[","","default"), ("]","","default"), ("\\","","default"),
-            # Thumbs
-            ("","","empty"), ("","","empty"),
-            ("","","empty"), ("▼ Adj","","layer"),
+            empty(), k("!"), k("@"), k("#"), k("$"), k("%"),
+            empty(), k("&"), k("*"), k("("), k(")"), empty(),
+            empty(), k("Esc", "Sft", "special"), k("LCtl"), k("LGui"), k("LAlt"), k("^"),
+            k("-"), k("=", "Alt"), k("{", "Gui"), k("}", "Ctl"), k("'", "Sft"), empty(),
+            empty(), k("Tab", style="special"), empty(), empty(), empty(), k("Boot", style="layer-blue"),
+            empty(), k("Bspc", style="special"), k("["), k("]"), k("\\"), empty(),
+            empty(), empty(), empty(), empty(), k("Adjust", style="layer-blue"), empty(),
         ],
     },
     {
+        "id": "nav-layer",
         "name": "Nav",
-        "indicator": "#27AE60",
+        "bar": "bar-nav",
+        "note": "Hold right thumb from Base",
         "keys": [
-            # Row 0
-            ("1","","default"), ("2","","default"), ("3","","default"), ("4","","default"), ("5","","default"),
-            ("6","","default"), ("7","","default"), ("8","","default"), ("9","","default"), ("0","","default"),
-            # Row 1
-            ("⇧","","default"), ("⌃","","default"), ("⌘","","default"), ("⌥","","default"), ("6","","default"),
-            ("←","","nav"), ("↓","⌥ hold","home_mod"), ("↑","⌘ hold","home_mod"), ("→","⌃ hold","home_mod"), ("⇧","","default"),
-            # Row 2
-            ("`","","default"), ("","","empty"), ("","","empty"), ("Del","","default"), ("","","empty"),
-            ("Boot","","special"), ("","","empty"), ("","","empty"), ("","","empty"), ("","","empty"),
-            # Thumbs
-            ("▼ Adj","","layer"), ("","","empty"),
-            ("","","empty"), ("","","empty"),
+            empty(), k("1"), k("2"), k("3"), k("4"), k("5"),
+            k("6"), k("7"), k("8"), k("9"), k("0"), empty(),
+            empty(), k("LSft"), k("LCtl"), k("LGui"), k("LAlt"), k("6"),
+            k("Left", style="special"), k("Down", "Alt", "special"), k("Up", "Gui", "special"),
+            k("Right", "Ctl", "special"), k("RSft"), empty(),
+            empty(), k("`"), empty("TRNS"), empty("TRNS"), k("Del", style="special"), empty("TRNS"),
+            k("Boot", style="layer-blue"), empty(), empty(), empty(), empty(), empty(),
+            empty(), k("Adjust", style="layer-blue"), empty(), empty(), empty(), empty(),
         ],
     },
     {
+        "id": "adjust-layer",
         "name": "Adjust",
-        "indicator": "#8E44AD",
+        "bar": "bar-adj",
+        "note": "From Symbols right thumb or Nav left thumb",
         "keys": [
-            # Row 0
-            ("F1","","default"), ("F2","","default"), ("F3","","default"), ("F4","","default"), ("","","empty"),
-            ("","","empty"),    ("","","empty"), ("","","empty"), ("","","empty"), ("","","empty"),
-            # Row 1
-            ("F5","","default"), ("F6","","default"), ("F7","","default"), ("F8","","default"), ("","","empty"),
-            ("","","empty"), ("Vol−","","media"), ("Mute","","media"), ("Vol+","","media"), ("","","empty"),
-            # Row 2
-            ("F9","","default"), ("F10","","default"), ("F11","","default"), ("F12","","default"), ("","","empty"),
-            ("BT 0","","bt"), ("⏮","","media"), ("⏯","","media"), ("⏭","","media"), ("BT CLR","","bt"),
-            # Thumbs
-            ("","","empty"), ("","","empty"),
-            ("","","empty"), ("","","empty"),
+            empty(), k("F1"), k("F2"), k("F3"), k("F4"), empty(),
+            empty(), empty(), empty(), empty(), empty(), empty(),
+            empty(), k("F5"), k("F6"), k("F7"), k("F8"), empty(),
+            empty(), k("Vol-", style="special"), k("Mute", style="special"), k("Vol+", style="special"), empty(), empty(),
+            empty(), k("F9"), k("F10"), k("F11"), k("F12"), empty(),
+            k("BT", "0", "layer-blue"), k("Prev", style="special"), k("Play", style="special"),
+            k("Next", style="special"), k("BT", "CLR", "layer-blue"), empty(),
+            empty(), empty(), empty(), empty(), empty(), empty(),
         ],
     },
 ]
 
-# Combos to annotate on the Base layer
-# Full 42-key matrix positions: RC(r,c) → 12*r + c; thumbs start at 36 (RC(3,3))
-# esc:  key-positions <15 20> → RC(1,3)=D, RC(1,8)=K  → PHYS[12], PHYS[17]
-# caps: key-positions <13 22> → RC(1,1)=A, RC(1,10)=; → PHYS[10], PHYS[19]
-# lang: key-positions < 3  8> → RC(0,3)=E, RC(0,8)=I  → PHYS[2],  PHYS[7]
-COMBOS = [
-    ("Esc",    12, 17),
-    ("CapsLk", 10, 19),
-    ("Lang",    2,  7),
-]
 
-
-def render_combo_line(x1, y1, x2, y2, label, color="#888888"):
-    cx = (x1 + KEY_W/2 + x2 + KEY_W/2) / 2
-    cy = (y1 + KEY_H/2 + y2 + KEY_H/2) / 2 - 14
+def key_position(index):
+    dtsi_x, dtsi_y = PHYS[index]
     return (
-        f'<line x1="{x1+KEY_W/2:.1f}" y1="{y1+KEY_H/2:.1f}" '
-        f'x2="{x2+KEY_W/2:.1f}" y2="{y2+KEY_H/2:.1f}" '
-        f'stroke="{color}" stroke-width="1.5" stroke-dasharray="3,2" opacity="0.6"/>'
-        f'\n<rect x="{cx-18:.1f}" y="{cy-7:.1f}" width="36" height="14" rx="3" '
-        f'fill="white" stroke="{color}" stroke-width="1" opacity="0.9"/>'
-        f'\n<text x="{cx:.1f}" y="{cy:.1f}" text-anchor="middle" dominant-baseline="middle" '
-        f'font-size="8" fill="{color}" font-weight="bold">{label}</text>'
+        POS_X_OFFSET + dtsi_x * POS_X_SCALE,
+        POS_Y_OFFSET + dtsi_y * POS_Y_SCALE,
     )
+
+
+def key_id(style):
+    return f"key-{style}"
+
+
+def text_class(key):
+    style = key["style"]
+    small = len(key["label"]) > 3 or bool(key["sub"])
+
+    if style in {"layer-gold", "layer-blue"}:
+        return "key-text-dark-small" if small else "key-text-dark"
+
+    return "key-text-small" if small else "key-text"
+
+
+def render_key(index, key):
+    x, y = key_position(index)
+    rotation = THUMB_ROTATIONS.get(index)
+    transform = f"translate({x:.0f} {y:.0f})"
+    if rotation:
+        transform += f" rotate({rotation} {KEY_CENTER_X:.0f} {KEY_CENTER_Y:.0f})"
+
+    lines = [f'    <g transform="{transform}"><use href="#{key_id(key["style"])}"/>']
+
+    label = escape(key["label"])
+    sub = escape(key["sub"])
+    cls = text_class(key)
+
+    if label and sub:
+        lines.append(f'<text class="{cls}" x="24" y="17">{label}</text>')
+        lines.append(f'<text class="key-sub" x="24" y="30">{sub}</text>')
+    elif label:
+        lines.append(f'<text class="{cls}" x="24" y="21">{label}</text>')
+
+    lines.append("</g>")
+    return "".join(lines)
+
+
+def render_layer(layer, offset_y):
+    lines = [
+        f'  <g id="{layer["id"]}" transform="translate(0 {offset_y})">',
+        f'    <rect class="layer-panel" x="{PANEL_X}" y="{PANEL_Y}" '
+        f'width="{PANEL_W}" height="{PANEL_H}" rx="8" ry="8"/>',
+        f'    <rect class="{layer["bar"]}" x="305" y="28" width="210" height="30" rx="4" ry="4"/>',
+        f'    <text class="title-text" x="410" y="43">{escape(layer["name"])}</text>',
+        f'    <text class="note-text" x="410" y="72">{escape(layer["note"])}</text>',
+        "",
+    ]
+
+    if len(layer["keys"]) != len(PHYS):
+        raise ValueError(f'{layer["name"]} has {len(layer["keys"])} keys, expected {len(PHYS)}')
+
+    row_breaks = {12, 24, 36}
+    for index, key in enumerate(layer["keys"]):
+        if index in row_breaks:
+            lines.append("")
+        lines.append(render_key(index, key))
+
+    if layer.get("combo"):
+        lines.extend([
+            "",
+            f'    <text class="combo-text" x="410" y="314">{escape(layer["combo"])}</text>',
+        ])
+
+    lines.append("  </g>")
+    return "\n".join(lines)
 
 
 def generate_svg():
-    TITLE_H = 22   # height for layer name label
-    KEY_AREA_H = int((335 + 100) * SCALE + MARGIN_Y)   # bottom of thumbs + margin
-    LAYER_BLOCK_H = TITLE_H + KEY_AREA_H
-    LAYER_GAP = 14
-    SVG_W = int((1300 - 100 + 100) * SCALE + MARGIN_X * 2)   # 602
-    SVG_H = len(LAYERS) * LAYER_BLOCK_H + (len(LAYERS) - 1) * LAYER_GAP + MARGIN_Y
+    layers_svg = "\n\n".join(
+        render_layer(layer, index * LAYER_STRIDE)
+        for index, layer in enumerate(LAYERS)
+    )
 
-    lines = [
-        f'<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 {SVG_W} {SVG_H}" '
-        f'width="{SVG_W}" height="{SVG_H}">',
-        '<style>text { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif; }</style>',
-        f'<rect width="{SVG_W}" height="{SVG_H}" fill="white"/>',
-    ]
+    return f'''<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="{SVG_WIDTH}" height="{SVG_HEIGHT}" viewBox="0 0 {SVG_WIDTH} {SVG_HEIGHT}" role="img" aria-labelledby="title desc">
+  <title id="title">Kometa keymap layout</title>
+  <desc id="desc">Four-layer layout diagram for the Kometa ZMK keymap.</desc>
+  <defs>
+    <g id="key-normal">
+      <rect class="key-normal" width="48" height="42" rx="6" ry="6"/>
+    </g>
+    <g id="key-layer-red">
+      <rect class="key-layer-red" width="48" height="42" rx="6" ry="6"/>
+    </g>
+    <g id="key-layer-gold">
+      <rect class="key-layer-gold" width="48" height="42" rx="6" ry="6"/>
+    </g>
+    <g id="key-layer-blue">
+      <rect class="key-layer-blue" width="48" height="42" rx="6" ry="6"/>
+    </g>
+    <g id="key-special">
+      <rect class="key-special" width="48" height="42" rx="6" ry="6"/>
+    </g>
+    <g id="key-empty">
+      <rect class="key-empty" width="48" height="42" rx="6" ry="6"/>
+    </g>
+    <style>
+      .sheet {{ fill: #10141b; }}
+      .layer-panel {{ fill: #151b24; stroke: #293241; stroke-width: 1; }}
+      .bar-base {{ fill: #3f4a59; stroke: #556173; }}
+      .bar-sym {{ fill: #a20025; stroke: #6f0000; }}
+      .bar-nav {{ fill: #d9a725; stroke: #b08312; }}
+      .bar-adj {{ fill: #5c8cca; stroke: #456893; }}
+      .key-normal {{ fill: #383e47; stroke: #05070a; stroke-width: 1; }}
+      .key-layer-red {{ fill: #a20025; stroke: #6f0000; stroke-width: 1; }}
+      .key-layer-gold {{ fill: #d9a725; stroke: #b08312; stroke-width: 1; }}
+      .key-layer-blue {{ fill: #5c8cca; stroke: #456893; stroke-width: 1; }}
+      .key-special {{ fill: #495566; stroke: #121820; stroke-width: 1; }}
+      .key-empty {{ fill: #202833; stroke: #596170; stroke-width: 1; stroke-dasharray: 4 4; }}
+      .title-text {{ fill: #ffffff; font: 700 16px Verdana, Arial, sans-serif; text-anchor: middle; dominant-baseline: middle; }}
+      .note-text {{ fill: #aeb9c8; font: 12px Verdana, Arial, sans-serif; text-anchor: middle; dominant-baseline: middle; }}
+      .key-text {{ fill: #edf2f7; font: 700 15px Verdana, Arial, sans-serif; text-anchor: middle; dominant-baseline: middle; }}
+      .key-text-dark {{ fill: #111820; font: 700 14px Verdana, Arial, sans-serif; text-anchor: middle; dominant-baseline: middle; }}
+      .key-text-small {{ fill: #edf2f7; font: 700 10px Verdana, Arial, sans-serif; text-anchor: middle; dominant-baseline: middle; }}
+      .key-text-dark-small {{ fill: #111820; font: 700 10px Verdana, Arial, sans-serif; text-anchor: middle; dominant-baseline: middle; }}
+      .key-sub {{ fill: #9fb0c3; font: 700 8.5px Verdana, Arial, sans-serif; text-anchor: middle; dominant-baseline: middle; }}
+      .combo-text {{ fill: #7ea6e0; font: 12px Verdana, Arial, sans-serif; text-anchor: middle; dominant-baseline: middle; }}
+    </style>
+  </defs>
 
-    for li, layer in enumerate(LAYERS):
-        y_base = MARGIN_Y + li * (LAYER_BLOCK_H + LAYER_GAP)
+  <rect class="sheet" width="{SVG_WIDTH}" height="{SVG_HEIGHT}"/>
 
-        # Layer name pill
-        color = layer["indicator"]
-        name = layer["name"]
-        lines.append(
-            f'<rect x="{MARGIN_X}" y="{y_base}" width="80" height="{TITLE_H - 2}" rx="9" fill="{color}"/>'
-        )
-        lines.append(
-            f'<text x="{MARGIN_X + 40}" y="{y_base + (TITLE_H - 2)/2}" '
-            f'text-anchor="middle" dominant-baseline="middle" '
-            f'font-size="11" font-weight="bold" fill="white">{name}</text>'
-        )
-
-        # Keys
-        keys = layer["keys"]
-        for ki, ((dx, dy), (l1, l2, style)) in enumerate(zip(PHYS, keys)):
-            sx, sy = pos(dx, dy)
-            sy += y_base + TITLE_H
-            lines.append(key_svg(sx, sy, l1, l2, style))
-
-        # Combo overlays on base layer only
-        if li == 0:
-            for combo_label, a_idx, b_idx in COMBOS:
-                ax, ay = pos(*PHYS[a_idx])
-                bx, by = pos(*PHYS[b_idx])
-                ay += y_base + TITLE_H
-                by += y_base + TITLE_H
-                lines.append(render_combo_line(ax, ay, bx, by, combo_label))
-
-    lines.append("</svg>")
-    return "\n".join(lines)
+{layers_svg}
+</svg>
+'''
 
 
 if __name__ == "__main__":
     import os
+
     os.makedirs("assets", exist_ok=True)
-    svg = generate_svg()
-    with open("assets/kometa-layout.svg", "w") as f:
-        f.write(svg)
+    with open("assets/kometa-layout.svg", "w", encoding="utf-8") as f:
+        f.write(generate_svg())
     print("Generated assets/kometa-layout.svg")
-    # Print dimensions for verification
-    import re
-    m = re.search(r'width="(\d+)" height="(\d+)"', svg)
-    if m:
-        print(f"Dimensions: {m.group(1)} x {m.group(2)}")
