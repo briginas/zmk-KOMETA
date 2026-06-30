@@ -18,6 +18,8 @@ Home row mods use **balanced** hold-tap (`hml` / `hmr`) on the letters **A S D F
 
 &nbsp;
 
+*Diagram mirrors `config/kometa.keymap`. [Editable draw.io copy](https://viewer.diagrams.net/?tags=%7B%7D&highlight=0000ff&edit=_blank&layers=1&nav=1&title=kometa-layout.drawio#Uhttps%3A%2F%2Fraw.githubusercontent.com%2Fbriginas%2Fzmk-KOMETA%2Fmain%2Fassets%2Fkometa-layout.drawio).*
+
 Dashed keys are physical keys that are currently unused (`&none`); transparent keys are marked as `TRNS`.
 
 | Layer | How you get there | Role |
