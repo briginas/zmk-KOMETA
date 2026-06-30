@@ -68,7 +68,7 @@
             bindings = <
 &none  &kp EXCL                &kp AT            &kp HASH      &kp DOLLAR    &kp PERCENT  &none      &kp AMPERSAND         &kp ASTERISK               &kp LEFT_PARENTHESIS            &kp RIGHT_PARENTHESIS  &none
 &none  &hml LEFT_SHIFT ESCAPE  &kp LEFT_CONTROL  &kp LEFT_GUI  &kp LEFT_ALT  &kp CARET    &kp MINUS  &hmr RIGHT_ALT EQUAL  &hmr RIGHT_GUI LEFT_BRACE  &hmr RIGHT_CONTROL RIGHT_BRACE  &hmr RIGHT_SHIFT SQT   &none
-&none  &kp TAB                 &none             &none         &none         &bootloader  &none      &kp BACKSPACE         &kp LEFT_BRACKET           &kp RIGHT_BRACKET               &kp BACKSLASH          &none
+&none  &kp TAB                 &none             &none         &none         &none        &none      &kp BACKSPACE         &kp LEFT_BRACKET           &kp RIGHT_BRACKET               &kp BACKSLASH          &none
                                                  &none         &none         &none        &none      &mo 3                 &none
             >;
         };
@@ -76,10 +76,10 @@
         nav {
             display-name = "Nav";
             bindings = <
-&none  &kp N1          &kp N2            &kp N3        &kp N4        &kp N5        &kp N6       &kp N7                     &kp N8                   &kp N9                    &kp N0           &none
-&none  &kp LEFT_SHIFT  &kp LEFT_CONTROL  &kp LEFT_GUI  &kp LEFT_ALT  &kp NUMBER_6  &kp LEFT     &hmr RIGHT_ALT DOWN_ARROW  &hmr RIGHT_GUI UP_ARROW  &hmr RIGHT_CONTROL RIGHT  &kp RIGHT_SHIFT  &none
-&none  &kp GRAVE       &trans            &trans        &kp DELETE    &trans        &bootloader  &none                      &none                    &none                     &none            &none
-                                         &none         &mo 3         &none         &none        &none                      &none
+&none  &kp N1          &kp N2            &kp N3        &kp N4        &kp N5        &kp N6    &kp N7                     &kp N8                   &kp N9                    &kp N0           &none
+&none  &kp LEFT_SHIFT  &kp LEFT_CONTROL  &kp LEFT_GUI  &kp LEFT_ALT  &kp NUMBER_6  &kp LEFT  &hmr RIGHT_ALT DOWN_ARROW  &hmr RIGHT_GUI UP_ARROW  &hmr RIGHT_CONTROL RIGHT  &kp RIGHT_SHIFT  &none
+&none  &kp GRAVE       &none             &none         &kp DELETE    &none         &none     &none                      &none                    &none                     &none            &none
+                                         &none         &mo 3         &none         &none     &none                      &none
             >;
         };
 
