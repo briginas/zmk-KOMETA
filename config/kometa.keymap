@@ -1,82 +1,95 @@
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/bt.h>
-#include <dt-bindings/zmk/ext_power.h>
 #include <dt-bindings/zmk/keys.h>
-#include <dt-bindings/zmk/outputs.h>
-#include <dt-bindings/zmk/rgb.h>
-
-#define DEF 0
-#define LWR 1
-#define RSE 2
-#define ADJ 3
-
-/ {
-};
 
 / {
     behaviors {
-        hr: hr {
+        hml: home_row_mod_left {
             compatible = "zmk,behavior-hold-tap";
-            label = "home_row";
+            #binding-cells = <2>;
+            flavor = "balanced";
+            tapping-term-ms = <200>;
+            quick-tap-ms = <150>;
             bindings = <&kp>, <&kp>;
 
+            require-prior-idle-ms = <50>;
+            hold-trigger-on-release;
+            hold-trigger-key-positions = <39 41 31 30 18 19 22 20 32 33 34 6 7 8 9 10 21>;
+        };
+
+        hmr: home_row_mod_right {
+            compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
-            tapping-term-ms = <150>;
-            quick-tap-ms = <250>;
-            flavor = "tap-preferred";
+            flavor = "balanced";
+            tapping-term-ms = <200>;
+            quick-tap-ms = <150>;
+            bindings = <&kp>, <&kp>;
+
+            require-prior-idle-ms = <50>;
+            hold-trigger-on-release;
+            hold-trigger-key-positions = <1 2 3 4 5 13 14 15 16 17 25 26 27 28 29 36 37>;
+        };
+    };
+
+    combos {
+        compatible = "zmk,combos";
+
+        esc {
+            bindings = <&kp ESCAPE>;
+            key-positions = <15 20>;
         };
 
-        copy: copy {
-            compatible = "zmk,behavior-tap-dance";
-            label = "COPY";
-            #binding-cells = <0>;
-            bindings = <&kp C>, <&kp K_COPY>;
+        caps {
+            bindings = <&kp CAPSLOCK>;
+            key-positions = <13 22>;
         };
 
-        paste: paste {
-            compatible = "zmk,behavior-tap-dance";
-            label = "PASTE";
-            #binding-cells = <0>;
-            bindings = <&kp V>, <&kp INSERT>;
+        lang {
+            bindings = <&kp LG(SPACE)>;
+            key-positions = <3 8>;
         };
     };
 
     keymap {
         compatible = "zmk,keymap";
 
-        default_layer {
+        en {
+            display-name = "base";
             bindings = <
-&kp LEFT_BRACKET  &kp Q  &kp W           &kp E        &kp R           &kp T                                      &kp Y           &kp U            &kp I        &kp O            &kp P     &kp RIGHT_BRACKET
-&kp GRAVE         &kp A  &hr LEFT_ALT S  &hr LCTRL D  &hr LEFT_GUI F  &kp G                                      &kp H           &hr RIGHT_WIN J  &hr RCTRL K  &hr RIGHT_ALT L  &kp SEMI  &kp SQT
-&kp BSLH          &kp Z  &kp X           &copy        &paste          &kp B                                      &kp N           &kp M            &kp COMMA    &kp DOT          &kp FSLH  &kp RG(SPACE)
-                                                      &lt RSE TAB     &mt LSHFT SPACE  &lt LWR RET  &lt LWR ESC  &mt RSHFT BSPC  &lt RSE DEL
+&none  &kp Q  &kp W  &kp E  &kp R  &kp T                                      &kp Y  &kp U  &kp I  &kp O  &kp P  &none
+&none  &hml LEFT_SHIFT A  &hml LEFT_CONTROL S  &hml LEFT_GUI D  &hml LEFT_ALT F  &kp G  &kp H  &hmr RIGHT_ALT J  &hmr RIGHT_GUI K  &hmr RIGHT_CONTROL L  &hmr RIGHT_SHIFT SEMICOLON  &none
+&none  &kp Z  &kp X  &kp C  &kp V  &kp B                                      &kp N  &kp M  &kp COMMA  &kp DOT  &kp FSLH  &none
+                                                      &mo 1  &kp SPACE  &none  &kp ENTER  &none  &mo 2
             >;
         };
 
-        lower_layer {
+        sym_en {
+            display-name = "Symbols";
             bindings = <
-&none  &none      &kp NUMBER_3           &kp NUMBER_2         &kp N1                 &kp ASTERISK                   &none   &kp EXCLAMATION       &kp AT_SIGN           &kp HASH               &none  &none
-&none  &kp EQUAL  &hr LEFT_ALT NUMBER_6  &hr LEFT_CONTROL N5  &hr LEFT_GUI NUMBER_4  &kp KP_DIVIDE                  &none   &hr RIGHT_GUI DOLLAR  &hr RCTRL PERCENT     &hr RIGHT_ALT CARET    &none  &none
-&none  &kp MINUS  &kp N9                 &kp N8               &kp N7                 &kp N0                         &none   &kp AMPERSAND         &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &none  &none
-                                                              &lt ADJ TAB            &trans         &trans  &trans  &trans  &lt ADJ DEL
+&none  &kp EXCL  &kp AT  &kp HASH  &kp DOLLAR  &kp PERCENT                                      &none  &kp AMPERSAND  &kp ASTERISK  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &none
+&none  &hml LEFT_SHIFT ESCAPE  &kp LEFT_CONTROL  &kp LEFT_GUI  &kp LEFT_ALT  &kp CARET  &kp MINUS  &hmr RIGHT_ALT EQUAL  &hmr RIGHT_GUI LEFT_BRACE  &hmr RIGHT_CONTROL RIGHT_BRACE  &hmr RIGHT_SHIFT SQT  &none
+&none  &kp TAB  &none  &none  &none  &bootloader                                      &none  &kp BACKSPACE  &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &kp BACKSLASH  &none
+                                                                                      &none  &none  &none  &none  &none  &mo 3
             >;
         };
 
-        raise_layer {
+        nav {
+            display-name = "Nav";
             bindings = <
-&none  &kp F1  &kp F2   &kp F3   &kp F4   &none                             &none   &none     &kp C_VOLUME_DOWN     &kp C_VOLUME_UP  &none            &none
-&none  &kp F5  &kp F6   &kp F7   &kp F8   &none                             &none   &kp LEFT  &kp DOWN              &kp UP           &kp RIGHT_ARROW  &none
-&none  &kp F9  &kp F10  &kp F11  &kp F12  &none                             &none   &none     &kp C_BRIGHTNESS_DEC  &kp C_BRI_UP     &none            &none
-                                 &trans   &trans  &lt ADJ RET  &lt ADJ ESC  &trans  &trans
+&none  &kp N1  &kp N2  &kp N3  &kp N4  &kp N5                                      &kp N6  &kp N7  &kp N8  &kp N9  &kp N0  &none
+&none  &kp LEFT_SHIFT  &kp LEFT_CONTROL  &kp LEFT_GUI  &kp LEFT_ALT  &kp NUMBER_6  &kp LEFT  &hmr RIGHT_ALT DOWN_ARROW  &hmr RIGHT_GUI UP_ARROW  &hmr RIGHT_CONTROL RIGHT  &kp RIGHT_SHIFT  &none
+&none  &kp GRAVE  &trans  &trans  &kp DELETE  &trans                                      &bootloader  &none  &none  &none  &none  &none
+                                                      &mo 3  &none  &none  &none  &none  &none
             >;
         };
 
-        adjust_layer {
+        adj {
+            display-name = "Adjust";
             bindings = <
-&none            &sys_reset       &bootloader      &out OUT_TOG     &ext_power EP_TOG  &soft_off                        &soft_off        &ext_power EP_TOG  &out OUT_TOG     &bootloader      &sys_reset       &none
-&bt BT_CLR_ALL   &bt BT_CLR       &bt BT_SEL 1     &bt BT_SEL 2     &none              &none                            &none            &none              &bt BT_SEL 2     &bt BT_SEL 1     &bt BT_SEL 0     &bt BT_CLR
-&rgb_ug RGB_TOG  &rgb_ug RGB_BRD  &rgb_ug RGB_BRI  &rgb_ug RGB_SAD  &rgb_ug RGB_SAI    &rgb_ug RGB_HUD                  &rgb_ug RGB_HUI  &rgb_ug RGB_SAD    &rgb_ug RGB_SPI  &rgb_ug RGB_EFR  &rgb_ug RGB_EFF  &rgb_ug RGB_TOG
-                                                                    &trans             &none            &trans  &trans  &none            &trans
+&none  &kp F1  &kp F2  &kp F3  &kp F4  &none                                      &none  &none  &none  &none  &none  &none
+&none  &kp F5  &kp F6  &kp F7  &kp F8  &none                                      &none  &kp C_VOLUME_DOWN  &kp K_MUTE  &kp C_VOLUME_UP  &none  &none
+&none  &kp F9  &kp F10  &kp F11  &kp F12  &none                                      &bt BT_SEL 0  &kp C_PREV  &kp C_PP  &kp C_NEXT  &bt BT_CLR  &none
+                                                      &none  &none  &none  &none  &none  &none
             >;
         };
     };
